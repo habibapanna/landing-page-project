@@ -28,7 +28,7 @@ const Hero = () => {
             More Calls and Booked Inspections in Texas.
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-col md:flex-row gap-4">
             <button className="bg-orange-500 hover:bg-white text-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-1000 cursor-pointer px-6 py-3 rounded-md font-semibold shadow">
               Book Free Strategy Call
             </button>
@@ -38,7 +38,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-600">
+          <div className="mt-8 flex gap-6 text-sm text-gray-600">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
               Texas-Based
