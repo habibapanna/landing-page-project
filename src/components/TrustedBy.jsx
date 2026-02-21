@@ -26,37 +26,42 @@ const TrustedBy = () => {
   return (
     <section id="reviews" className="w-full py-20 bg-white text-center">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
+        <p className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-widest">
           Trusted by Roofers
         </p>
 
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="mt-3 text-[25px] md:text-4xl font-bold text-gray-900">
           5-Star Rated on Fiverr & Upwork
         </h2>
 
         <div className="flex justify-center mt-4 gap-1 text-orange-500">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} fill="currentColor" size={20} />
+            <Star key={i} fill="currentColor" size={25} />
           ))}
+        </div>
+        <div className="mt-4 flex justify-center items-center gap-8 text-gray-500 text-sm md:text-base font-semibold">
+
+    <span className="flex items-center gap-2">Fiver:5.0 <Star fill="currentColor" size={12}></Star></span>
+    <span className="flex items-center gap-2">Upwork:5.0 <Star fill="currentColor" size={12}></Star></span>
         </div>
 
         <div className="mt-14 grid md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm text-left"
+              className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm text-left"
             >
-              <p className="text-gray-600 text-sm">“{item.quote}”</p>
+              <p className="text-gray-600 font-semibold text-sm md:text-base">“{item.quote}”</p>
 
               <div className="mt-6">
-                <h4 className="font-semibold text-gray-900">{item.name}</h4>
-                <p className="text-xs text-gray-500">{item.company}</p>
+                <h4 className="font-semibold text-gray-800">{item.name}</h4>
+                <p className="text-xs md:text-sm text-gray-500">{item.company}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <button className="mt-12 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium shadow">
+        <button className="mt-12 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-1000 px-6 py-3 rounded-md font-medium shadow cursor-pointer">
           Book Free Strategy Call
         </button>
       </div>

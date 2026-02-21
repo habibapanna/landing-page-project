@@ -26,17 +26,17 @@ const Problem = () => {
   ];
 
   return (
-    <section id="why-us" className="w-full bg-gray-50 py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
+    <section id="why-us" className="w-full bg-slate-100 py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-widest text-center">
           The Problem
         </p>
 
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="mt-3 text-[25px] md:text-4xl font-bold text-gray-800 text-center">
           Most Roofing Companies Rely Only on Referrals
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-center text-base md:text-[18px]">
           And when potential customers do find your website, here’s what happens...
         </p>
 
@@ -46,11 +46,11 @@ const Problem = () => {
               key={index}
               className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition"
             >
-              <div className="mb-4">{item.icon}</div>
-              <h3 className="font-semibold text-lg text-gray-900">
+              <div className="mb-4 bg-orange-100 rounded p-2 h-12 w-12 flex items-center">{item.icon}</div>
+              <h3 className="font-bold text-lg text-gray-800">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm text-gray-600">{item.desc}</p>
+              <p className="mt-3 text-sm md:text-base text-gray-600">{item.desc}</p>
             </div>
           ))}
         </div>

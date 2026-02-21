@@ -38,26 +38,26 @@ const Process = () => {
   return (
     <section id="process" className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
+        <p className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-widest">
           Our Process
         </p>
 
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="mt-3 text-[25px] md:text-4xl font-bold text-gray-800">
           Our 7-Day Roofing Website System
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-[18px]">
           From strategy call to live website in just 7 days.
         </p>
 
-        <div className="mt-16 grid md:grid-cols-5 gap-8">
+        <div className="mt-16 grid md:grid-cols-5 gap-5">
           {steps.map((item, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-900 text-white">
+            <div key={index} className="flex flex-col items-center group">
+              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-800 group-hover:bg-orange-500 text-white transition-all duration-1000">
                 {item.icon}
               </div>
 
-              <p className="mt-4 text-xs uppercase text-orange-500 font-semibold">
+              <p className="mt-4 text-xs md:text-sm uppercase text-orange-500 font-semibold">
                 {item.step}
               </p>
 
@@ -65,7 +65,7 @@ const Process = () => {
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
+              <p className="mt-2 text-sm md:text-base text-gray-600">{item.desc}</p>
             </div>
           ))}
         </div>

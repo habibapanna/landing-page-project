@@ -19,7 +19,7 @@ const Navbar = () => {
   <a href="#portfolio" className="hover:text-black transition">Portfolio</a>
   <a href="#reviews" className="hover:text-black transition">Reviews</a>
 
-  <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md font-medium shadow-sm">
+  <button className="ml-4 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border border-transparent hover:border-orange-500 transition-all duration-1000 px-5 py-2 rounded-md font-medium shadow-sm cursor-pointer">
     Book Free Strategy Call
   </button>
 </nav>

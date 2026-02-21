@@ -20,17 +20,17 @@ const Work = () => {
   ];
 
   return (
-    <section id="portfolio" className="w-full py-20 bg-gray-50">
+    <section id="portfolio" className="w-full py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
+        <p className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-widest">
           Our Work
         </p>
 
-        <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+        <h2 className="mt-3 text-[25px] md:text-4xl font-bold text-gray-800">
           Roofing Websites That Convert
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-[18px]">
           See how we’ve helped roofing companies generate more leads online.
         </p>
 
@@ -38,17 +38,17 @@ const Work = () => {
           {projects.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group cursor-pointer"
             >
-              <img src={item.img} alt={item.title} className="w-full" />
+              <img src={item.img} alt={item.title} className="w-full group-hover:scale-105 transition-all duration-1000" />
 
               <div className="p-6 text-left">
-                <h3 className="font-semibold text-lg text-gray-900">
+                <h3 className="font-semibold text-lg text-gray-800">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm text-gray-600">{item.desc}</p>
+                <p className="mt-3 text-sm md:text-base  text-gray-600">{item.desc}</p>
 
-                <button className="mt-4 border border-orange-500 text-orange-500 px-4 py-2 rounded-md text-sm hover:bg-orange-50">
+                <button className="mt-4 border-2 border-orange-500 text-orange-500 px-4 py-1 rounded-md text-sm md:text-base group-hover:bg-orange-500 group-hover:text-white transition-all duration-1000 cursor-pointer font-semibold">
                   View Project
                 </button>
               </div>
