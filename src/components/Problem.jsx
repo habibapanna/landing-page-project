@@ -26,8 +26,8 @@ const Problem = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="w-full bg-gray-50 py-20">
+      <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
           The Problem
         </p>

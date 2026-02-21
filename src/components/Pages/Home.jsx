@@ -7,7 +7,7 @@ import TrustedBy from '../TrustedBy';
 
 const Home = () => {
     return (
-        <div className='max-w-7xl mx-auto'> 
+        <div> 
            <Hero />
 <Problem />
 <Process />

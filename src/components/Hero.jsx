@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="py-20">
+    <section className="max-w-full w-full py-20">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT */}
