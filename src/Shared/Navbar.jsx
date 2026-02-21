@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 backdrop-blur-md w-full border-b border-gray-200 bg-white">
+
+      {/* Top Bar */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
@@ -12,19 +17,58 @@ const Navbar = () => {
           <span className="text-gray-900"> Web</span>
         </h1>
 
-        {/* Menu */}
-<nav className="hidden md:flex items-center gap-8 text-sm md:text-base font-semibold text-gray-600">
-  <a href="#why-us" className="hover:text-black transition">Why Us</a>
-  <a href="#process" className="hover:text-black transition">Process</a>
-  <a href="#portfolio" className="hover:text-black transition">Portfolio</a>
-  <a href="#reviews" className="hover:text-black transition">Reviews</a>
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+          <a href="#why-us" className="hover:text-black">Why Us</a>
+          <a href="#process" className="hover:text-black">Process</a>
+          <a href="#portfolio" className="hover:text-black">Portfolio</a>
+          <a href="#reviews" className="hover:text-black">Reviews</a>
 
-  <button className="ml-4 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border border-transparent hover:border-orange-500 transition-all duration-1000 px-5 py-2 rounded-md font-medium shadow-sm cursor-pointer font-semibold">
-    Book Free Strategy Call
-  </button>
-</nav>
+          <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md shadow-sm">
+            Book Free Strategy Call
+          </button>
+        </nav>
 
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-gray-700"
+        >
+          {open ? <X size={28}/> : <Menu size={28}/>}
+        </button>
       </div>
+
+      {/* Mobile Dropdown */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
+          open ? "max-h-[400px] " : "max-h-0"
+        }`}
+      >
+        <div className="px-6 py-6 space-y-4 text-gray-500 text-sm font-semibold bg-white">
+
+          <a href="#why-us" onClick={()=>setOpen(false)} className="block">
+            Why Us
+          </a>
+
+          <a href="#process" onClick={()=>setOpen(false)} className="block">
+            Process
+          </a>
+
+          <a href="#portfolio" onClick={()=>setOpen(false)} className="block">
+            Portfolio
+          </a>
+
+          <a href="#reviews" onClick={()=>setOpen(false)} className="block">
+            Reviews
+          </a>
+
+          <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold">
+            Book Free Strategy Call
+          </button>
+
+        </div>
+      </div>
+
     </header>
   );
 };
