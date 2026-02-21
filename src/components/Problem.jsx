@@ -44,7 +44,7 @@ const Problem = () => {
           {problems.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-sm border hover:shadow-md transition"
+              className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition"
             >
               <div className="mb-4">{item.icon}</div>
               <h3 className="font-semibold text-lg text-gray-900">

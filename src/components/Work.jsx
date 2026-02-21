@@ -3,17 +3,17 @@ import React from "react";
 const Work = () => {
   const projects = [
     {
-      img: "https://ironpeak-builder.lovable.app/assets/project1.png",
+      img: "https://ironpeak-builder.lovable.app/assets/portfolio-residential-BBNkoJYq.png",
       title: "Residential Roofing",
       desc: "Modern website for a residential roofing company featuring lead capture forms.",
     },
     {
-      img: "https://ironpeak-builder.lovable.app/assets/project2.png",
+      img: "https://ironpeak-builder.lovable.app/assets/portfolio-storm-DHXgg2TQ.png",
       title: "Storm Damage Roofing",
       desc: "Emergency-focused design with strong CTAs for storm damage repair.",
     },
     {
-      img: "https://ironpeak-builder.lovable.app/assets/project3.png",
+      img: "https://ironpeak-builder.lovable.app/assets/portfolio-commercial-P8ZHfIea.png",
       title: "Commercial Roofing",
       desc: "Professional website showcasing large-scale commercial projects.",
     },
@@ -38,7 +38,7 @@ const Work = () => {
           {projects.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm border overflow-hidden hover:shadow-md transition"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
             >
               <img src={item.img} alt={item.title} className="w-full" />
 

@@ -44,7 +44,7 @@ const TrustedBy = () => {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-lg border shadow-sm text-left"
+              className="bg-gray-50 p-6 rounded-lg border border-gray-200 shadow-sm text-left"
             >
               <p className="text-gray-600 text-sm">“{item.quote}”</p>
 
