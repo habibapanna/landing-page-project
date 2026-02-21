@@ -13,17 +13,16 @@ const Navbar = () => {
         </h1>
 
         {/* Menu */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
-          <a href="#" className="hover:text-black">Why Us</a>
-          <a href="#" className="hover:text-black">Process</a>
-          <a href="#" className="hover:text-black">Portfolio</a>
-          <a href="#" className="hover:text-black">Reviews</a>
+<nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
+  <a href="#why-us" className="hover:text-black transition">Why Us</a>
+  <a href="#process" className="hover:text-black transition">Process</a>
+  <a href="#portfolio" className="hover:text-black transition">Portfolio</a>
+  <a href="#reviews" className="hover:text-black transition">Reviews</a>
 
-          {/* CTA */}
-          <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md font-medium shadow-sm">
-            Book Free Strategy Call
-          </button>
-        </nav>
+  <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md font-medium shadow-sm">
+    Book Free Strategy Call
+  </button>
+</nav>
 
       </div>
     </header>

@@ -22,20 +22,20 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap gap-8 text-sm text-gray-400">
-            <a href="#" className="hover:text-white transition">
-              Why Us
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Process
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Portfolio
-            </a>
-            <a href="#" className="hover:text-white transition">
-              Reviews
-            </a>
-          </div>
+         <div className="flex flex-wrap gap-8 text-sm text-gray-400">
+  <a href="#why-us" className="hover:text-white transition">
+    Why Us
+  </a>
+  <a href="#process" className="hover:text-white transition">
+    Process
+  </a>
+  <a href="#portfolio" className="hover:text-white transition">
+    Portfolio
+  </a>
+  <a href="#reviews" className="hover:text-white transition">
+    Reviews
+  </a>
+</div>
         </div>
 
         {/* Divider */}

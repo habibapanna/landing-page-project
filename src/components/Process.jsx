@@ -36,7 +36,7 @@ const Process = () => {
   ];
 
   return (
-    <section className="w-full py-20 bg-white">
+    <section id="process" className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
           Our Process
