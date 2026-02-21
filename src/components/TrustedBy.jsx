@@ -51,7 +51,7 @@ const TrustedBy = () => {
               key={index}
               className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm text-left"
             >
-              <p className="text-gray-600 font-semibold text-sm md:text-base">“{item.quote}”</p>
+              <p className="text-gray-600 text-sm md:text-base">“{item.quote}”</p>
 
               <div className="mt-6">
                 <h4 className="font-semibold text-gray-800">{item.name}</h4>
@@ -61,7 +61,7 @@ const TrustedBy = () => {
           ))}
         </div>
 
-        <button className="mt-12 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-1000 px-6 py-3 rounded-md font-medium shadow cursor-pointer">
+        <button className="mt-12 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-1000 px-6 py-3 rounded-md shadow font-semibold cursor-pointer">
           Book Free Strategy Call
         </button>
       </div>

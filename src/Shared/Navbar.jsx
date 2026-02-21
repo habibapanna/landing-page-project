@@ -6,20 +6,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <h1 className="text-xl font-semibold tracking-tight">
+        <h1 className="text-xl font-bold tracking-tight">
           <span className="text-gray-900">Iron</span>
           <span className="text-orange-500">Peak</span>
           <span className="text-gray-900"> Web</span>
         </h1>
 
         {/* Menu */}
-<nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
+<nav className="hidden md:flex items-center gap-8 text-sm md:text-base font-semibold text-gray-600">
   <a href="#why-us" className="hover:text-black transition">Why Us</a>
   <a href="#process" className="hover:text-black transition">Process</a>
   <a href="#portfolio" className="hover:text-black transition">Portfolio</a>
   <a href="#reviews" className="hover:text-black transition">Reviews</a>
 
-  <button className="ml-4 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border border-transparent hover:border-orange-500 transition-all duration-1000 px-5 py-2 rounded-md font-medium shadow-sm cursor-pointer">
+  <button className="ml-4 bg-orange-500 hover:bg-white text-white hover:text-orange-500 border border-transparent hover:border-orange-500 transition-all duration-1000 px-5 py-2 rounded-md font-medium shadow-sm cursor-pointer font-semibold">
     Book Free Strategy Call
   </button>
 </nav>

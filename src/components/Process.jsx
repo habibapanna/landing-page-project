@@ -65,7 +65,7 @@ const Process = () => {
                 {item.title}
               </h3>
 
-              <p className="mt-2 text-sm md:text-base text-gray-600">{item.desc}</p>
+              <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
             </div>
           ))}
         </div>

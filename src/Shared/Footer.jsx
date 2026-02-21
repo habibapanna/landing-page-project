@@ -10,7 +10,7 @@ const Footer = () => {
 
           {/* Logo + Tagline */}
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">
+            <h1 className="text-xl font-bold tracking-tight">
               <span className="text-white">Iron</span>
               <span className="text-orange-500">Peak</span>
               <span className="text-white"> Web</span>
