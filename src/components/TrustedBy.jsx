@@ -39,7 +39,7 @@ const TrustedBy = () => {
             <Star key={i} fill="currentColor" size={25} />
           ))}
         </div>
-        <div className="mt-4 flex justify-center items-center gap-8 text-gray-500 text-sm md:text-base font-semibold">
+        <div className="mt-4 flex justify-center items-center gap-8 text-gray-500 text-[15px] font-semibold">
 
     <span className="flex items-center gap-2">Fiver:5.0 <Star fill="currentColor" size={12}></Star></span>
     <span className="flex items-center gap-2">Upwork:5.0 <Star fill="currentColor" size={12}></Star></span>

@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-         <div className="flex flex-wrap gap-8 text-sm md:text-base font-semibold text-gray-400">
+         <div className="flex flex-wrap gap-8 text-[15px] font-semibold text-gray-400">
   <a href="#why-us" className="hover:text-white transition cursor-pointer">
     Why Us
   </a>

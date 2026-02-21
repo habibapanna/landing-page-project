@@ -46,9 +46,9 @@ const Work = () => {
                 <h3 className="font-semibold text-lg text-gray-800">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm md:text-base  text-gray-600">{item.desc}</p>
+                <p className="mt-3 text-[15px] text-gray-600">{item.desc}</p>
 
-                <button className="mt-4 border-2 border-orange-500 text-orange-500 px-4 py-1 rounded-md text-sm md:text-base group-hover:bg-orange-500 group-hover:text-white transition-all duration-1000 cursor-pointer font-semibold">
+                <button className="mt-4 border-2 border-orange-500 text-orange-500 px-4 py-1 rounded-md text-[15px] group-hover:bg-orange-500 group-hover:text-white transition-all duration-1000 cursor-pointer font-semibold">
                   View Project
                 </button>
               </div>

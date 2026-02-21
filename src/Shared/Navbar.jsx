@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md w-full border-b border-gray-200 bg-white">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-white/90 w-full border-b border-gray-200">
 
       {/* Top Bar */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -18,11 +18,11 @@ const Navbar = () => {
         </h1>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
-          <a href="#why-us" className="hover:text-black">Why Us</a>
-          <a href="#process" className="hover:text-black">Process</a>
-          <a href="#portfolio" className="hover:text-black">Portfolio</a>
-          <a href="#reviews" className="hover:text-black">Reviews</a>
+        <nav className="hidden md:flex items-center gap-8 text-[15px] font-semibold text-gray-500">
+          <a href="#why-us" className="hover:text-gray-700 transition-all duration-500">Why Us</a>
+          <a href="#process" className="hover:text-gray-700 transition-all duration-500">Process</a>
+          <a href="#portfolio" className="hover:text-gray-700 transition-all duration-500">Portfolio</a>
+          <a href="#reviews" className="hover:text-gray-700 transition-all duration-500">Reviews</a>
 
           <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md shadow-sm">
             Book Free Strategy Call
