@@ -24,8 +24,8 @@ const Navbar = () => {
           <a href="#portfolio" className="hover:text-gray-700 transition-all duration-500">Portfolio</a>
           <a href="#reviews" className="hover:text-gray-700 transition-all duration-500">Reviews</a>
 
-          <button className="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md shadow-sm">
-            Book Free Strategy Call
+          <button className="ml-4 bg-orange-500 text-white px-5 py-2 rounded-md shadow-sm hover:bg-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-500 cursor-pointer">
+            Book Free Strategy Call 
           </button>
         </nav>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
             Reviews
           </a>
 
-          <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold">
+          <button className="w-full bg-orange-500 text-white py-3 rounded-lg font-semibold  hover:bg-white hover:text-orange-500 border-2 border-transparent hover:border-orange-500 transition-all duration-500 cursor-pointer">
             Book Free Strategy Call
           </button>
 
