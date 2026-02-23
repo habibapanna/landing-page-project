@@ -1,74 +1,115 @@
 import React from "react";
-import { Search, Layout, Code, Rocket, BarChart3 } from "lucide-react";
+import { Target, Palette, Zap, Search, Rocket } from "lucide-react";
 
 const Process = () => {
   const steps = [
     {
-      icon: <Search size={26} />,
-      step: "Step 01",
-      title: "Discovery & Strategy",
-      desc: "We analyze your market, competitors, and target audience in your Texas service area.",
+      number: "1",
+      icon: <Target size={20} className="text-orange-500" />,
+      title: "Strategy & Discovery Call",
+      desc: "We learn your market, competitors, and goals. We identify your highest-converting offer and build the sitemap around it.",
+      days: "Day 1–2",
     },
     {
-      icon: <Layout size={26} />,
-      step: "Step 02",
-      title: "Custom Design",
-      desc: "A unique, conversion-focused layout built specifically for roofing companies.",
+      number: "2",
+      icon: <Palette size={20} className="text-orange-500" />,
+      title: "Custom Design Mockup",
+      desc: "We design a conversion-focused layout tailored to roofing in your Texas market — not a template. You approve before we build.",
+      days: "Day 2–3",
     },
     {
-      icon: <Code size={26} />,
-      step: "Step 03",
-      title: "Development",
-      desc: "Fast, mobile-first, SEO-optimized website built with modern technology.",
+      number: "3",
+      icon: <Zap size={20} className="text-orange-500" />,
+      title: "Lightning-Fast Development",
+      desc: "We build your site on a blazing-fast platform, mobile-optimized, with click-to-call, lead forms, and local SEO built in.",
+      days: "Day 3–4",
     },
     {
-      icon: <Rocket size={26} />,
-      step: "Step 04",
-      title: "Launch & Optimize",
-      desc: "We launch your site and ensure it’s ranking and converting from day one.",
+      number: "4",
+      icon: <Search size={20} className="text-orange-500" />,
+      title: "SEO & Speed Optimization",
+      desc: "We optimize every page for Google — meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
+      days: "Day 4–5",
     },
     {
-      icon: <BarChart3 size={26} />,
-      step: "Step 05",
-      title: "Ongoing Support",
-      desc: "Continuous monitoring, updates, and performance improvements to keep you ahead.",
+      number: "5",
+      icon: <Rocket size={20} className="text-orange-500" />,
+      title: "Launch & Lead Capture",
+      desc: "Your site goes live in 7 days. We connect your CRM, calendar, and lead forms so every visitor has a path to becoming a customer.",
+      days: "Day 5–6",
     },
   ];
 
   return (
-    <section id="process" className="w-full py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <p className="text-orange-500 font-semibold text-sm md:text-base uppercase tracking-widest">
+    <section id="process" className="w-full bg-[#f3f4f6] py-24">
+      <div className="max-w-5xl mx-auto px-6 text-center">
+        
+        {/* Top Label */}
+        <p className="text-orange-500 font-semibold text-sm tracking-[0.2em] uppercase">
           Our Process
         </p>
 
-        <h2 className="mt-3 text-[25px] md:text-4xl font-bold text-gray-800">
+        {/* Heading */}
+        <h2 className="mt-4 text-3xl md:text-5xl font-bold text-gray-900">
           Our 7-Day Roofing Website System
         </h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-base md:text-[18px]">
-          From strategy call to live website in just 7 days.
+        {/* Subtext */}
+        <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
+          From strategy call to go-live in 7 days. Every step is engineered to maximize lead generation for Texas roofers.
         </p>
 
-        <div className="mt-16 grid md:grid-cols-5 gap-5">
+        {/* Steps */}
+        <div className="mt-16 space-y-6 text-left">
           {steps.map((item, index) => (
-            <div key={index} className="flex flex-col items-center group">
-              <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-800 group-hover:bg-orange-500 text-white transition-all duration-1000">
-                {item.icon}
+            <div
+              key={index}
+              className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 flex items-start justify-between gap-6 shadow-sm"
+            >
+              {/* Left Content */}
+              <div className="flex items-start gap-5">
+                
+                {/* Number Circle */}
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                  {item.number}
+                </div>
+
+                {/* Text */}
+                <div>
+                  <div className="flex items-center gap-2">
+                    {item.icon}
+                    <h3 className="font-semibold text-gray-900 text-lg">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-2xl">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
 
-              <p className="mt-4 text-xs md:text-sm uppercase text-orange-500 font-semibold">
-                {item.step}
-              </p>
-
-              <h3 className="mt-2 font-semibold text-gray-900 text-lg">
-                {item.title}
-              </h3>
-
-              <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
+              {/* Day Badge */}
+              <div className="shrink-0">
+                <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
+                  {item.days}
+                </span>
+              </div>
             </div>
           ))}
         </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-8 py-4 rounded-xl shadow-lg">
+            Start Your 7-Day Build →
+          </button>
+
+          <p className="mt-4 text-sm text-gray-500">
+            Limited spots available each month for Texas roofers.
+          </p>
+        </div>
+
       </div>
     </section>
   );
