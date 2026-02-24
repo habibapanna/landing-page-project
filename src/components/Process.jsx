@@ -109,7 +109,7 @@ const Process = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <button className="bg-orange-500 hover:bg-orange-600 transition text-white font-semibold px-8 py-4 rounded-xl shadow-lg">
+          <button className="bg-orange-500  hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-8 py-4 rounded-xl shadow-lg">
             Start Your 7-Day Build →
           </button>
 

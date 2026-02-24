@@ -82,7 +82,7 @@ const Problem = () => {
             specifically for roofing lead generation.
           </p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition duration-300">
+          <button className="bg-orange-500  hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-8 py-4 rounded-lg shadow-lg">
             Fix My Website →
           </button>
 

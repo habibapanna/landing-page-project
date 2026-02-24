@@ -66,12 +66,12 @@ const Hero = () => {
               href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-md text-[15px] font-semibold transition text-center shadow-orange-500 shadow-2xl"
+              className="bg-orange-500  hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-4 py-3 rounded-md text-[15px] font-semibold text-center shadow-orange-500 shadow-2xl"
             >
               Book Free Strategy Call
             </a>
 
-            <button className="border border-white/30 hover:border-white text-white px-4 py-3 rounded-md text-[15px] font-semibold transition">
+            <button className="border border-white text-white px-4 py-3 rounded-md text-[15px] font-semibold transition-all duration-500 hover:bg-white hover:text-gray-800 cursor-pointer">
               Get a Free Website Plan →
             </button>
           </div>

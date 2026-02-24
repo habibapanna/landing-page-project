@@ -36,31 +36,29 @@ const TrustedBy = () => {
         {/* Rating Badges */}
         <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
           
-          <div className="bg-white px-8 py-4 rounded-full flex items-center gap-4 shadow-sm">
-            <span className="font-medium text-gray-700">Rated on</span>
-            <span className="font-bold text-black">Fiverr</span>
-            <div className="flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="currentColor" />
-              ))}
-            </div>
-            <span className="text-sm text-gray-600 font-medium">
-              5.0 (40+ reviews)
-            </span>
+          <div className="bg-white px-8 py-4 rounded-lg flex items-center gap-4 shadow-sm">
+          <img src="https://i.postimg.cc/pXW0PyPD/Whats-App-Image-2026-02-24-at-2-13-34-AM.jpg" alt="" />
           </div>
 
-          <div className="bg-white px-8 py-4 rounded-full flex items-center gap-4 shadow-sm">
-            <span className="font-medium text-gray-700">Rated on</span>
-            <span className="font-bold text-black">Upwork</span>
-            <div className="flex text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={16} fill="currentColor" />
-              ))}
-            </div>
-            <span className="text-sm text-gray-600 font-medium">
-              5.0 (25+ reviews)
-            </span>
-          </div>
+         <div className="bg-white px-8 py-6 rounded-lg shadow-sm flex flex-col items-center justify-center text-center min-w-[220px]">
+  
+  <p className="text-gray-500 text-sm mb-1">Rated on</p>
+
+  <h3 className="text-xl font-bold text-black mb-2">
+    Upwork
+  </h3>
+
+  <div className="flex text-yellow-400 mb-2">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} size={18} fill="currentColor" />
+    ))}
+  </div>
+
+  <p className="text-sm text-gray-600 font-medium">
+    5.0 (25+ reviews)
+  </p>
+
+</div>
 
         </div>
 
