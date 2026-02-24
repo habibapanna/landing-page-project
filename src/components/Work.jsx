@@ -31,8 +31,8 @@ const Work = () => {
   ];
 
   return (
-    <section id="portfolio" className="w-full bg-[#f3f4f6] py-24">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="portfolio" className="w-full bg-slate-100 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         
         <p className="text-orange-500 font-semibold text-sm tracking-[0.2em] uppercase">
           Our Work

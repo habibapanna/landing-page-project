@@ -41,8 +41,8 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="w-full bg-[#f3f4f6] py-24">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section id="process" className="w-full bg-white py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         
         {/* Top Label */}
         <p className="text-orange-500 font-semibold text-sm tracking-[0.2em] uppercase">
@@ -70,12 +70,16 @@ const Process = () => {
               <div className="flex items-start gap-5">
                 
                 {/* Number Circle */}
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                <div className="w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
                   {item.number}
                 </div>
 
                 {/* Text */}
                 <div>
+                   {/* Number Circle */}
+                <div className="w-10 h-10 md:hidden mb-5 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                  {item.number}
+                </div>
                   <div className="flex items-center gap-2">
                     {item.icon}
                     <h3 className="font-semibold text-gray-900 text-lg">
@@ -83,14 +87,18 @@ const Process = () => {
                     </h3>
                   </div>
 
-                  <p className="mt-2 text-gray-600 text-sm leading-relaxed max-w-2xl">
+                  <p className="mt-2 text-gray-600 text-sm leading-relaxed">
                     {item.desc}
                   </p>
+                   <span className="md:hidden flex items-center h-6 w-20 mt-5 text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium ">
+                  {item.days}
+                </span>
                 </div>
+                
               </div>
 
               {/* Day Badge */}
-              <div className="shrink-0">
+              <div className="hidden md:block shrink-0">
                 <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
                   {item.days}
                 </span>

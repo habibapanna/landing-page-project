@@ -32,8 +32,8 @@ const Problem = () => {
   ];
 
   return (
-    <section id="services" className="w-full bg-[#f1f5f9] py-28">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="services" className="w-full bg-[#f1f5f9] py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         
         {/* Top Label */}
         <p className="text-orange-500 font-semibold text-sm tracking-[0.25em] uppercase">

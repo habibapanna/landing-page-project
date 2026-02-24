@@ -6,12 +6,12 @@ const Hero = () => {
     "https://calendly.com/ironpeakweb/30min?month=2026-02";
 
   return (
-    <section className="relative w-full bg-[#0E1A2B] text-white pt-15 md:pt-20 pb-32 overflow-hidden">
+    <section className="relative w-full bg-[#0E1A2B] text-white pt-30 md:pt-50 pb-32 overflow-hidden">
 
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A2B] via-[#12243C] to-[#0B1624]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
 
         {/* LEFT */}
         <div>
@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="mt-6 md:hidden lg:block text-[40px] md:text-[50px] font-bold leading-[1.1]">
+          <h1 className="mt-6 hidden md:hidden lg:block text-[40px] md:text-[50px] font-bold leading-[1.1]">
             Roofing Companies
             <br />
             Without a Strong
@@ -30,20 +30,20 @@ const Hero = () => {
             Website <span className="text-orange-500">Lose Jobs Every Week.</span>
           </h1>
 
-          <h1 className="mt-6 hidden lg:hidden md:block text-[40px] md:text-[48px] font-bold leading-[1.1]">
+          <h1 className="mt-6 lg:hidden md:block text-[35px] md:text-[48px] font-bold leading-tight">
             Roofing Companies
             Without a Strong
             Website <span className="text-orange-500">Lose Jobs Every Week.</span>
           </h1>
 
           {/* Paragraph */}
-          <p className="mt-6 text-gray-300 text-[16px] max-w-lg leading-relaxed">
+          <p className="mt-6 text-gray-300 text-[18px] md:text-[20px] max-w-lg leading-tight">
             We Build & Redesign Roofing Websites That Generate More Calls
             and Booked Inspections in Texas.
           </p>
 
           {/* Bullet Points */}
-          <div className="mt-6 flex flex-wrap gap-6 text-[14px] text-gray-300">
+          <div className="mt-6 flex flex-col md:flex-row gap-2 md:gap-6 text-[14px] text-gray-300">
             <div className="flex items-center gap-2">
               <CheckCircle size={16} className="text-orange-500" />
               Delivered in 7 Days
@@ -66,12 +66,12 @@ const Hero = () => {
               href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-[15px] font-semibold transition text-center shadow-orange-500 shadow-2xl"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-md text-[15px] font-semibold transition text-center shadow-orange-500 shadow-2xl"
             >
               Book Free Strategy Call
             </a>
 
-            <button className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-md text-[15px] font-semibold transition">
+            <button className="border border-white/30 hover:border-white text-white px-4 py-3 rounded-md text-[15px] font-semibold transition">
               Get a Free Website Plan →
             </button>
           </div>
@@ -85,16 +85,16 @@ const Hero = () => {
         {/* RIGHT */}
         <div className="relative flex justify-center lg:justify-end">
 
-          <div className="relative p-6 rounded-xl">
+          <div className="relative md:p-6 rounded-xl">
             <img
               src="https://texan-roof-boost.lovable.app/assets/hero-mockup-hjTrRWsT.jpg"
               alt="mockup"
-              className="w-[500px] rounded-lg"
+              className="md:w-125 rounded-lg"
             />
           </div>
 
           {/* Floating Card */}
-          <div className="absolute bottom-10 left-5 translate-y-10 bg-white text-gray-900 px-5 py-3 rounded-xl shadow-xl text-sm font-medium">
+          <div className="absolute bottom-0 md:bottom-10 left-0 md:left-5 translate-y-10 bg-white text-gray-900 px-5 py-3 rounded-xl shadow-xl text-sm font-medium">
             <div className="flex items-center gap-5">
               <span className="text-xl">📈</span>
               <div>

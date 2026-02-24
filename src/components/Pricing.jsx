@@ -3,8 +3,8 @@ import { Check, Zap } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="w-full bg-[#f3f4f6] py-28">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="pricing" className="w-full bg-slate-100 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-4 text-center">
 
         {/* Top Label */}
         <p className="text-orange-500 font-semibold text-sm tracking-[0.25em] uppercase">

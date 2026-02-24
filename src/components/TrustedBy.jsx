@@ -30,8 +30,8 @@ const TrustedBy = () => {
   ];
 
   return (
-    <section id="reviews" className="w-full py-28 bg-[#f3f4f6]">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section id="reviews" className="w-full py-20 md:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4 text-center">
 
         {/* Rating Badges */}
         <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
@@ -82,7 +82,7 @@ const TrustedBy = () => {
   {testimonials.map((item, index) => (
     <div
       key={index}
-      className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 flex flex-col h-full"
+      className="bg-linear-to-b from-white via-slate-50 to-slate-100 p-6 rounded-2xl shadow-lg border border-gray-200 flex flex-col h-full"
     >
       {/* Stars */}
       <div className="flex text-yellow-400 mb-6">

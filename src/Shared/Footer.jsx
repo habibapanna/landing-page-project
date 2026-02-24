@@ -1,10 +1,14 @@
 import React from "react";
+import { CiCalendar } from "react-icons/ci";
+import { IoCallOutline } from "react-icons/io5";
 
 const Footer = () => {
+  const calendlyLink =
+  "https://calendly.com/ironpeakweb/30min?month=2026-02";
   return (
     <footer className="bg-[#0B1C2D] text-white border-t-4 border-orange-500">
       {/* CTA SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
         <div>
@@ -31,13 +35,18 @@ const Footer = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold transition">
-              📞 Call Now: (800) 555-1234
+            <button className="bg-orange-500 hover:bg-orange-600 px-4 py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2">
+              <IoCallOutline /> Call Now: (800) 555-1234
             </button>
 
-            <button className="border border-gray-500 px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
-              📅 Schedule a Call
-            </button>
+           <a
+  href={calendlyLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-gray-500 px-4 py-3 rounded-lg hover:bg-white hover:text-black transition flex items-center justify-center gap-2"
+>
+  <CiCalendar /> Schedule a Call
+</a>
           </div>
 
           <p className="text-gray-500 text-sm mt-4">
@@ -67,9 +76,14 @@ const Footer = () => {
               Connect your Calendly to enable live booking
             </p>
 
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition">
-              Book on Calendly →
-            </button>
+           <a
+  href={calendlyLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold transition inline-block"
+>
+  Book on Calendly →
+</a>
           </div>
 
           <p className="text-xs text-gray-500 text-center mt-4">
@@ -79,12 +93,17 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+      <div className="border-t border-gray-700 bg-[#111827]">
+        <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
           
-          <div className="flex items-center gap-2 text-white font-semibold">
-            ⚡ RoofLaunch<span className="text-orange-500">TX</span>
+           <div className="flex items-center gap-2">
+          <div className="w-7 h-7 bg-[#132a42] rounded-md flex items-center justify-center">
+            <span className="text-orange-500 font-bold text-sm">⚡</span>
           </div>
+          <h1 className="text-[15px] font-semibold text-white">
+            RoofLaunch<span className="text-orange-500">TX</span>
+          </h1>
+        </div>
 
           <p className="text-center">
             © {new Date().getFullYear()} RoofLaunchTX. All rights reserved. · Built for Texas Roofers.

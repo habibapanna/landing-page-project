@@ -8,8 +8,8 @@ const Navbar = () => {
     "https://calendly.com/ironpeakweb/30min?month=2026-02";
 
   return (
-    <header className="w-full bg-white sticky top-0 z-50 backdrop-blur-md border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-6 h-[68px] flex items-center justify-between">
+    <header className="w-full bg-white fixed top-0 z-50 backdrop-blur-md border-b border-gray-200">
+      <div className="max-w-6xl mx-auto px-4 h-[68px] flex items-center justify-between">
         
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="flex flex-col px-6 py-6 gap-6 text-[15px] font-medium text-gray-700">
+          <div className="flex flex-col px-4 py-6 gap-6 text-[15px] font-medium text-gray-700">
             <a href="#services" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
               Services
             </a>
