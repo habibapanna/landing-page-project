@@ -23,10 +23,10 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10 text-[14px] text-gray-500 font-medium">
-          <a href="#" className="hover:text-gray-900 transition">Services</a>
-          <a href="#" className="hover:text-gray-900 transition">Portfolio</a>
-          <a href="#" className="hover:text-gray-900 transition">Pricing</a>
-          <a href="#" className="hover:text-gray-900 transition">Reviews</a>
+          <a href="#services" className="hover:text-gray-900 transition">Services</a>
+          <a href="#portfolio" className="hover:text-gray-900 transition">Portfolio</a>
+          <a href="#pricing" className="hover:text-gray-900 transition">Pricing</a>
+          <a href="#reviews" className="hover:text-gray-900 transition">Reviews</a>
         </nav>
 
         {/* Desktop CTA */}
@@ -54,16 +54,16 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="flex flex-col px-6 py-6 gap-6 text-[15px] font-medium text-gray-700">
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
+            <a href="#services" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
               Services
             </a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
+            <a href="#portfolio" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
               Portfolio
             </a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
+            <a href="#pricing" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
               Pricing
             </a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
+            <a href="#reviews" onClick={() => setIsOpen(false)} className="hover:text-gray-900 transition">
               Reviews
             </a>
 

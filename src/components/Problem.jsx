@@ -32,7 +32,7 @@ const Problem = () => {
   ];
 
   return (
-    <section className="w-full bg-[#f1f5f9] py-28">
+    <section id="services" className="w-full bg-[#f1f5f9] py-28">
       <div className="max-w-7xl mx-auto px-6 text-center">
         
         {/* Top Label */}
