@@ -54,7 +54,7 @@ const Pricing = () => {
               ))}
             </ul>
 
-            <button className="mt-8 w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+            <button className="mt-8 w-full bg-gray-900 text-white py-3 rounded-lg font-semibold  hover:bg-white hover:text-gray-800 cursor-pointer border border-gray-800 transition-all duration-500">
               Get Started
             </button>
           </div>
@@ -97,7 +97,7 @@ const Pricing = () => {
               ))}
             </ul>
 
-            <button className="mt-8 w-full bg-orange-500 hover:bg-orange-600 transition text-white py-3 rounded-lg font-semibold shadow-lg">
+            <button className="mt-8 w-full bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white cursor-pointer py-3 rounded-lg font-semibold shadow-lg">
               Book Free Strategy Call
             </button>
           </div>
@@ -133,7 +133,7 @@ const Pricing = () => {
               ))}
             </ul>
 
-            <button className="mt-8 w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+            <button className="mt-8 w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 cursor-pointer border border-gray-800 transition-all duration-500">
               Book Free Strategy Call
             </button>
           </div>
