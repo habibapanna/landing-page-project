@@ -126,7 +126,7 @@ const TrustedBy = () => {
 </div>
 
         {/* Button */}
-        <button className="mt-20 px-8 py-3 border-2 border-[#0f172a] text-[#0f172a] rounded-xl font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-500 cursor-pointer">
+        <button className="mt-20 px-8 py-3 border-2 border-[#0f172a] text-[#0f172a] rounded-lg font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-500 cursor-pointer">
           View Full Reviews
         </button>
 
