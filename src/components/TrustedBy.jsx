@@ -48,14 +48,14 @@ const TrustedBy = () => {
     Upwork
   </h3>
 
-  <div className="flex text-yellow-400 mb-2">
+  <div className="flex text-orange-500 mb-2">
     {[...Array(5)].map((_, i) => (
       <Star key={i} size={18} fill="currentColor" />
     ))}
   </div>
 
-  <p className="text-sm text-gray-600 font-medium">
-    5.0 (25+ reviews)
+  <p className="text-sm font-semibold text-gray-500 font-medium">
+    4.9 reviews (100% job success)
   </p>
 
 </div>
@@ -83,7 +83,7 @@ const TrustedBy = () => {
       className="bg-linear-to-b from-white via-slate-50 to-slate-100 p-6 rounded-2xl shadow-lg border border-gray-200 flex flex-col h-full"
     >
       {/* Stars */}
-      <div className="flex text-yellow-400 mb-6">
+      <div className="flex text-orange-500 mb-6">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={18} fill="currentColor" />
         ))}
