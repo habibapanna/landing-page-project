@@ -1,21 +1,30 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion"; // ✅ Import Framer Motion
 
 const Hero = () => {
   const calendlyLink =
     "https://calendly.com/ironpeakweb/30min?month=2026-02";
 
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
+  };
+
   return (
     <section className="relative w-full bg-[#0E1A2B] text-white pt-30 md:pt-50 pb-32 overflow-hidden">
-
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A2B] via-[#12243C] to-[#0B1624]" />
 
       <div className="relative max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
-
+        
         {/* LEFT */}
-        <div>
-
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Orange Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400 text-[12px] uppercase tracking-widest font-semibold">
             Texas Roofing Websites
@@ -60,13 +69,11 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-8 flex flex-col md:flex-row gap-4">
-            
-            {/* ✅ Calendly CTA */}
             <a
               href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500  hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-4 py-3 rounded-md text-[15px] font-semibold text-center shadow-orange-500 shadow-2xl"
+              className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-4 py-3 rounded-md text-[15px] font-semibold text-center shadow-orange-500 shadow-2xl"
             >
               Book Free Strategy Call
             </a>
@@ -80,11 +87,16 @@ const Hero = () => {
           <p className="mt-6 text-gray-400 text-[13px]">
             ⭐ 5.0 rated on Fiverr & Upwork · 40+ roofing sites launched
           </p>
-        </div>
+        </motion.div>
 
         {/* RIGHT */}
-        <div className="relative flex justify-center lg:justify-end">
-
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.3 }} // Delay right side slightly
+          className="relative flex justify-center lg:justify-end"
+        >
           <div className="relative md:p-6 rounded-xl">
             <img
               src="https://texan-roof-boost.lovable.app/assets/hero-mockup-hjTrRWsT.jpg"
@@ -103,8 +115,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );

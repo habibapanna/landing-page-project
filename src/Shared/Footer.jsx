@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer flex items-center justify-center gap-2">
+            <button className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer flex items-center justify-center gap-2 w-full">
               <IoCallOutline /> Call Now: (800) 555-1234
             </button>
 
@@ -43,7 +43,7 @@ const Footer = () => {
   href={calendlyLink}
   target="_blank"
   rel="noopener noreferrer"
-  className="border border-gray-500 px-4 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-2"
+  className="border border-gray-500 px-4 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-2 w-full"
 >
   <CiCalendar /> Schedule a Call
 </a>
