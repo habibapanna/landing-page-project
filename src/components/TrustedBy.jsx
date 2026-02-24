@@ -36,11 +36,11 @@ const TrustedBy = () => {
         {/* Rating Badges */}
         <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
           
-          <div className="bg-white px-8 py-4 rounded-lg flex items-center gap-4 shadow-sm">
+          <div className="bg-white px-8 py-4 rounded-lg flex items-center gap-4 shadow-md border border-gray-200">
           <img src="https://i.postimg.cc/pXW0PyPD/Whats-App-Image-2026-02-24-at-2-13-34-AM.jpg" alt="" />
           </div>
 
-         <div className="bg-white px-8 py-6 rounded-lg shadow-sm flex flex-col items-center justify-center text-center min-w-[220px]">
+         <div className="bg-white px-8 py-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center justify-center text-center min-w-[220px]">
   
   <p className="text-gray-500 text-sm mb-1">Rated on</p>
 
