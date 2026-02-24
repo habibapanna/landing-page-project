@@ -8,6 +8,7 @@ const TrustedBy = () => {
         "RoofLaunchTX redesigned our site and within 3 weeks we had more leads than we'd gotten all last quarter. The phone doesn't stop ringing now. Worth every penny.",
       name: "Jake Morales",
       company: "Morales Roofing — San Antonio, TX",
+      initials: "JM",
       platform: "Fiverr",
     },
     {
@@ -15,6 +16,7 @@ const TrustedBy = () => {
         "They delivered in exactly 7 days like they promised. The site looks incredible on mobile and our Google ranking jumped from page 4 to page 1 within 6 weeks.",
       name: "Brad Calloway",
       company: "Texas Peak Roofing — Plano, TX",
+      initials: "BC",
       platform: "Upwork",
     },
     {
@@ -22,88 +24,109 @@ const TrustedBy = () => {
         "After the last hurricane season we needed a site fast. They set up our emergency landing page in 48 hours and we booked 30+ inspections that month alone.",
       name: "Maria Santos",
       company: "Santos Storm Services — Houston, TX",
+      initials: "MS",
       platform: "Fiverr",
     },
   ];
 
   return (
-    <section id="reviews" className="w-full py-24 bg-gray-100 text-center">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="reviews" className="w-full py-28 bg-[#f3f4f6]">
+      <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Rating Badges */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-          <div className="bg-white px-6 py-4 rounded-full shadow-sm flex items-center gap-3 border">
-            <span className="font-semibold text-gray-700">Rated on Fiverr</span>
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
+          
+          <div className="bg-white px-8 py-4 rounded-full flex items-center gap-4 shadow-sm">
+            <span className="font-medium text-gray-700">Rated on</span>
+            <span className="font-bold text-black">Fiverr</span>
             <div className="flex text-yellow-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} fill="currentColor" />
               ))}
             </div>
-            <span className="text-gray-600 text-sm font-medium">
+            <span className="text-sm text-gray-600 font-medium">
               5.0 (40+ reviews)
             </span>
           </div>
 
-          <div className="bg-white px-6 py-4 rounded-full shadow-sm flex items-center gap-3 border">
-            <span className="font-semibold text-gray-700">Rated on Upwork</span>
+          <div className="bg-white px-8 py-4 rounded-full flex items-center gap-4 shadow-sm">
+            <span className="font-medium text-gray-700">Rated on</span>
+            <span className="font-bold text-black">Upwork</span>
             <div className="flex text-yellow-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={16} fill="currentColor" />
               ))}
             </div>
-            <span className="text-gray-600 text-sm font-medium">
+            <span className="text-sm text-gray-600 font-medium">
               5.0 (25+ reviews)
             </span>
           </div>
+
         </div>
 
         {/* Section Heading */}
-        <p className="text-orange-500 font-semibold text-sm uppercase tracking-widest">
+        <p className="text-orange-500 text-sm font-semibold tracking-widest uppercase">
           Client Reviews
         </p>
 
-        <h2 className="mt-4 text-3xl md:text-5xl font-bold text-gray-900">
+        <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#0f172a]">
           Real Roofers. Real Results.
         </h2>
 
-        <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
           Texas roofing companies trust us to build their online presence.
         </p>
 
-        {/* Testimonials Grid */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        {/* Testimonials */}
+        <div className="mt-20 grid md:grid-cols-3 gap-8 text-left">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-md border border-gray-200 text-left"
+              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
             >
-              <div className="flex text-yellow-400 mb-4">
+              {/* Stars */}
+              <div className="flex text-yellow-400 mb-6">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={18} fill="currentColor" />
                 ))}
               </div>
 
-              <p className="text-gray-600 text-sm leading-relaxed">
-                “{item.quote}”
+              {/* Quote */}
+              <p className="text-gray-600 leading-relaxed text-[15px]">
+                "{item.quote}"
               </p>
 
-              <div className="mt-6 pt-6 border-t">
-                <h4 className="font-semibold text-gray-900">
-                  {item.name}
-                </h4>
-                <p className="text-sm text-gray-500">
-                  {item.company}
-                </p>
-                <span className="text-xs text-gray-400 mt-1 inline-block">
+              {/* Divider */}
+              <div className="border-t border-gray-200 my-6"></div>
+
+              {/* Bottom Row */}
+              <div className="flex items-center justify-between">
+                
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-10 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-sm font-semibold">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-[#0f172a]">
+                      {item.name}
+                    </h4>
+                    <p className="text-sm text-gray-500">
+                      {item.company}
+                    </p>
+                  </div>
+                </div>
+
+                <span className="text-sm font-medium text-gray-700">
                   {item.platform}
                 </span>
+
               </div>
             </div>
           ))}
         </div>
 
         {/* Button */}
-        <button className="mt-16 px-8 py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300">
+        <button className="mt-20 px-8 py-3 border-2 border-[#0f172a] text-[#0f172a] rounded-xl font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-300">
           View Full Reviews
         </button>
 

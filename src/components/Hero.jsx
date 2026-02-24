@@ -2,13 +2,16 @@ import React from "react";
 import { CheckCircle } from "lucide-react";
 
 const Hero = () => {
+  const calendlyLink =
+    "https://calendly.com/ironpeakweb/30min?month=2026-02";
+
   return (
-    <section className="relative w-full bg-[#0E1A2B] text-white pt-28 pb-32 overflow-hidden">
+    <section className="relative w-full bg-[#0E1A2B] text-white pt-15 md:pt-20 pb-32 overflow-hidden">
 
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A2B] via-[#12243C] to-[#0B1624]" />
 
-      <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT */}
         <div>
@@ -19,11 +22,17 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="mt-6 text-[40px] md:text-[48px] font-bold leading-[1.1]">
+          <h1 className="mt-6 md:hidden lg:block text-[40px] md:text-[50px] font-bold leading-[1.1]">
             Roofing Companies
             <br />
             Without a Strong
             <br />
+            Website <span className="text-orange-500">Lose Jobs Every Week.</span>
+          </h1>
+
+          <h1 className="mt-6 hidden lg:hidden md:block text-[40px] md:text-[48px] font-bold leading-[1.1]">
+            Roofing Companies
+            Without a Strong
             Website <span className="text-orange-500">Lose Jobs Every Week.</span>
           </h1>
 
@@ -50,10 +59,17 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="mt-8 flex gap-4">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-[15px] font-semibold shadow-lg transition">
+          <div className="mt-8 flex flex-col md:flex-row gap-4">
+            
+            {/* ✅ Calendly CTA */}
+            <a
+              href={calendlyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md text-[15px] font-semibold transition text-center shadow-orange-500 shadow-2xl"
+            >
               Book Free Strategy Call
-            </button>
+            </a>
 
             <button className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-md text-[15px] font-semibold transition">
               Get a Free Website Plan →
@@ -67,28 +83,28 @@ const Hero = () => {
         </div>
 
         {/* RIGHT */}
-        <div className="relative flex justify-center md:justify-end">
+        <div className="relative flex justify-center lg:justify-end">
 
-          {/* Glow Behind Image */}
-          <div className="absolute w-[520px] h-[380px] bg-orange-500/20 blur-3xl rounded-full" />
-
-          {/* Laptop Container */}
-          <div className="relative bg-[#111827] p-6 rounded-xl shadow-[0_25px_80px_rgba(0,0,0,0.6)] border border-white/10">
+          <div className="relative p-6 rounded-xl">
             <img
               src="https://texan-roof-boost.lovable.app/assets/hero-mockup-hjTrRWsT.jpg"
               alt="mockup"
-              className="w-[480px] rounded-lg"
+              className="w-[500px] rounded-lg"
             />
           </div>
 
           {/* Floating Card */}
-          <div className="absolute bottom-0 left-0 translate-y-10 bg-white text-gray-900 px-5 py-3 rounded-xl shadow-xl text-sm font-medium">
-            <div className="text-gray-500 text-xs">Avg. result</div>
-            <div className="font-semibold">+3x More Leads</div>
+          <div className="absolute bottom-10 left-5 translate-y-10 bg-white text-gray-900 px-5 py-3 rounded-xl shadow-xl text-sm font-medium">
+            <div className="flex items-center gap-5">
+              <span className="text-xl">📈</span>
+              <div>
+                <div className="text-gray-500 text-xs">Avg. result</div>
+                <div className="font-semibold">+3x More Leads</div>
+              </div>
+            </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );
