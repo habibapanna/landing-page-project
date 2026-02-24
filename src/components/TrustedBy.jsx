@@ -77,53 +77,55 @@ const TrustedBy = () => {
           Texas roofing companies trust us to build their online presence.
         </p>
 
-        {/* Testimonials */}
-        <div className="mt-20 grid md:grid-cols-3 gap-8 text-left">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200"
-            >
-              {/* Stars */}
-              <div className="flex text-yellow-400 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} fill="currentColor" />
-                ))}
-              </div>
+{/* Testimonials */}
+<div className="mt-20 grid md:grid-cols-3 gap-8 text-left items-stretch">
+  {testimonials.map((item, index) => (
+    <div
+      key={index}
+      className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 flex flex-col h-full"
+    >
+      {/* Stars */}
+      <div className="flex text-yellow-400 mb-6">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} size={18} fill="currentColor" />
+        ))}
+      </div>
 
-              {/* Quote */}
-              <p className="text-gray-600 leading-relaxed text-[15px]">
-                "{item.quote}"
-              </p>
+      {/* Quote */}
+      <p className="text-gray-600 leading-relaxed text-[15px]">
+        "{item.quote}"
+      </p>
 
-              {/* Divider */}
-              <div className="border-t border-gray-200 my-6"></div>
+      {/* This pushes bottom content to same position */}
+      <div className="mt-auto">
+        <div className="border-t border-gray-200 my-6"></div>
 
-              {/* Bottom Row */}
-              <div className="flex items-center justify-between">
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-10 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-sm font-semibold">
-                    {item.initials}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#0f172a]">
-                      {item.name}
-                    </h4>
-                    <p className="text-sm text-gray-500">
-                      {item.company}
-                    </p>
-                  </div>
-                </div>
-
-                <span className="text-sm font-medium text-gray-700">
-                  {item.platform}
-                </span>
-
-              </div>
+        {/* Bottom Row */}
+        <div className="flex items-center justify-between">
+          
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-10 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-sm font-semibold">
+              {item.initials}
             </div>
-          ))}
+            <div>
+              <h4 className="font-semibold text-[#0f172a]">
+                {item.name}
+              </h4>
+              <p className="text-sm text-gray-500">
+                {item.company}
+              </p>
+            </div>
+          </div>
+
+          <span className="text-sm font-medium text-gray-700">
+            {item.platform}
+          </span>
+
         </div>
+      </div>
+    </div>
+  ))}
+</div>
 
         {/* Button */}
         <button className="mt-20 px-8 py-3 border-2 border-[#0f172a] text-[#0f172a] rounded-xl font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-300">
