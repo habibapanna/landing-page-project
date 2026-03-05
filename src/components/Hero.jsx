@@ -95,19 +95,21 @@ const Hero = () => {
         {/* POPUP FORM */}
       <AnimatePresence>
         {openPopup && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+        <motion.div
+  className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  onClick={() => setOpenPopup(false)}   // 👈 close when clicking outside
+>
 
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-[#0E1A2B] border border-white/10 rounded-lg p-8 w-full max-w-lg relative shadow-2xl"
-            >
+          <motion.div
+  onClick={(e) => e.stopPropagation()}   // 👈 prevent closing when clicking inside
+  initial={{ scale: 0.9, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  exit={{ scale: 0.9, opacity: 0 }}
+  className="bg-[#0E1A2B] border border-white/10 rounded-lg p-8 w-full max-w-lg relative shadow-2xl"
+>
 
               {/* Close Button */}
               <button
@@ -126,7 +128,6 @@ const Hero = () => {
               </p>
 
 <form
-  action="https://formsubmit.co/ironpeakweb@gmail.com"
   method="POST"
   className="space-y-4"
 >

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiCalendar } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 
 const Footer = () => {
   const calendlyLink =
   "https://calendly.com/ironpeakweb/30min?month=2026-02";
+
+const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <footer className="bg-[#0B1C2D] text-white border-t-4 border-orange-500">
       {/* CTA SECTION */}
@@ -35,9 +38,12 @@ const Footer = () => {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4">
-            <button className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer flex items-center justify-center gap-2 w-full">
+            <button
+              onClick={() => setOpenPopup(true)}
+            className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer flex items-center justify-center gap-2 w-full">
               <IoCallOutline /> Call Now: (800) 555-1234
             </button>
+
 
            <a
   href={calendlyLink}
