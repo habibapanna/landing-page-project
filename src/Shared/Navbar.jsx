@@ -27,7 +27,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.reload()}>
           <a href="/">
-            <div className="w-7 h-7 bg-[#111827] rounded-md flex items-center justify-center">
+            <div className="w-7 h-7 bg-[#111827] rounded-lg flex items-center justify-center">
               <span className="text-orange-500 font-bold text-sm">⚡</span>
             </div>
           </a>
@@ -61,7 +61,7 @@ const Navbar = () => {
             href={calendlyLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-5 py-2 rounded-md text-[14px] font-semibold inline-block"
+            className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-5 py-2 rounded-lg text-[14px] font-semibold inline-block"
           >
             Book Free Call
           </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
               href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white py-3 rounded-md font-semibold text-center"
+              className="mt-4 bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white py-3 rounded-lg font-semibold text-center"
               onClick={() => setIsOpen(false)}
             >
               Book Free Call

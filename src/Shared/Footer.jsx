@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         {/* Right Card */}
-        <div className="bg-white text-black rounded-2xl p-10 shadow-xl">
+        <div className="bg-white text-black rounded-lg p-10 shadow-xl">
           <div className="text-center mb-6">
             <div className="bg-gray-100 w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4">
               📅

@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   ShieldAlert,
   PhoneOff,
@@ -56,7 +56,7 @@ const Problem = () => {
           {problems.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition duration-300"
+              className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition duration-300"
             >
               <div className="mb-6 text-3xl">{item.icon}</div>
 
@@ -75,7 +75,7 @@ const Problem = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-15 bg-gradient-to-r from-[#0b1220] to-[#111827] rounded-2xl px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="mt-15 bg-gradient-to-r from-[#0b1220] to-[#111827] rounded-lg px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
           
           <p className="text-white text-lg font-medium text-left max-w-2xl">
             💡 The fix isn't more ads or more door-knocking. It's a website built

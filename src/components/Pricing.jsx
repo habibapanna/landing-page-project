@@ -26,7 +26,7 @@ const Pricing = () => {
         <div className="mt-20 grid md:grid-cols-3 gap-8 items-center">
 
           {/* Starter */}
-          <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-8 text-left">
+          <div className="bg-white rounded-lg shadow-md border border-gray-200 p-8 text-left">
             <h3 className="text-xl font-semibold text-gray-900">Starter</h3>
             <p className="text-sm text-gray-500 mt-1">
               Great for new roofing companies
@@ -60,7 +60,7 @@ const Pricing = () => {
           </div>
 
           {/* Growth (Most Popular) */}
-          <div className="relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl shadow-2xl p-10 text-left text-white scale-105">
+          <div className="relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-lg shadow-2xl p-10 text-left text-white scale-105">
 
             {/* Badge */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-semibold px-4 py-1 rounded-full flex items-center gap-1">
@@ -103,7 +103,7 @@ const Pricing = () => {
           </div>
 
           {/* Authority */}
-          <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-8 text-left">
+          <div className="bg-white rounded-lg shadow-md border border-gray-200 p-8 text-left">
             <h3 className="text-xl font-semibold text-gray-900">Authority</h3>
             <p className="text-sm text-gray-500 mt-1">
               Dominate your Texas market
@@ -141,7 +141,7 @@ const Pricing = () => {
         </div>
 
         {/* ROI Box */}
-        <div className="mt-20 max-w-3xl mx-auto bg-white border border-gray-200 rounded-xl p-6 shadow-sm text-sm text-gray-700">
+        <div className="mt-20 max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-sm text-gray-700">
           💰 <span className="font-semibold">ROI Reality Check:</span> The average
           residential roof replacement in Texas is $8,000–$15,000.
           One booked job from your new website pays for itself 5–15x.

@@ -50,7 +50,7 @@ const Work = () => {
           {projects.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden cursor-pointer group transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+              className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden cursor-pointer group transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
             >
               {/* Image Wrapper (IMPORTANT for overlay + scale) */}
               <div className="relative overflow-hidden">
@@ -103,7 +103,7 @@ const Work = () => {
         </div>
 
         <div className="mt-16">
-          <button className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-10 py-4 rounded-xl shadow-lg">
+          <button className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg">
             Get My Free Website Plan →
           </button>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Star } from "lucide-react";
 
 const TrustedBy = () => {
@@ -80,7 +80,7 @@ const TrustedBy = () => {
   {testimonials.map((item, index) => (
     <div
       key={index}
-      className="bg-linear-to-b from-white via-slate-50 to-slate-100 p-6 rounded-2xl shadow-lg border border-gray-200 flex flex-col h-full"
+      className="bg-linear-to-b from-white via-slate-50 to-slate-100 p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col h-full"
     >
       {/* Stars */}
       <div className="flex text-orange-500 mb-6">
