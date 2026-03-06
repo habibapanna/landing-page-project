@@ -1,32 +1,41 @@
 
 import { Star } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import Test1 from '../assets/test_1.png';
+import Test2 from '../assets/test_2.png';
+import Test3 from '../assets/test_3.png';
+import Test4 from '../assets/test_4.png';
+import Test5 from '../assets/test_5.png';
+import Test6 from '../assets/test_6.png';
+import Test7 from '../assets/test_7.png';
+import Test8 from '../assets/test_8.png';
+import Test9 from '../assets/test_9.png';
+import Test10 from '../assets/test_10.png';
+import Test11 from '../assets/test_11.png';
+import Test12 from '../assets/test_12.png';
+import Test13 from '../assets/test_13.png';
+import Test14 from '../assets/test_14.png';
+import Test15 from '../assets/test_15.png';
+import Test16 from '../assets/test_16.png';
+import Test17 from '../assets/test_17.jpeg';
 
 const TrustedBy = () => {
-  const testimonials = [
-    {
-      quote:
-        "RoofLaunchTX redesigned our site and within 3 weeks we had more leads than we'd gotten all last quarter. The phone doesn't stop ringing now. Worth every penny.",
-      name: "Jake Morales",
-      company: "Morales Roofing — San Antonio, TX",
-      initials: "JM",
-      platform: "Fiverr",
-    },
-    {
-      quote:
-        "They delivered in exactly 7 days like they promised. The site looks incredible on mobile and our Google ranking jumped from page 4 to page 1 within 6 weeks.",
-      name: "Brad Calloway",
-      company: "Texas Peak Roofing — Plano, TX",
-      initials: "BC",
-      platform: "Upwork",
-    },
-    {
-      quote:
-        "After the last hurricane season we needed a site fast. They set up our emergency landing page in 48 hours and we booked 30+ inspections that month alone.",
-      name: "Maria Santos",
-      company: "Santos Storm Services — Houston, TX",
-      initials: "MS",
-      platform: "Fiverr",
-    },
+  const [index, setIndex] = useState(0);
+
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 2) % images.length);
+  };
+  
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 2 + images.length) % images.length);
+  };
+
+  const images = [
+    Test1, Test2, Test3, Test4,
+    Test5, Test6, Test7, Test8,
+    Test9, Test10, Test11, Test12,
+    Test13, Test14, Test15, Test16, Test17,
   ];
 
   return (
@@ -75,54 +84,46 @@ const TrustedBy = () => {
           Texas roofing companies trust us to build their online presence.
         </p>
 
-{/* Testimonials */}
-<div className="mt-20 grid md:grid-cols-3 gap-8 text-left items-stretch">
-  {testimonials.map((item, index) => (
-    <div
-      key={index}
-      className="bg-linear-to-b from-white via-slate-50 to-slate-100 p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col h-full"
-    >
-      {/* Stars */}
-      <div className="flex text-orange-500 mb-6">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} size={18} fill="currentColor" />
-        ))}
-      </div>
+{/* Image Testimonials Carousel */}
+<div className="mt-24 relative max-w-5xl mx-auto">
 
-      {/* Quote */}
-      <p className="text-gray-600 leading-relaxed text-[15px]">
-        "{item.quote}"
-      </p>
+{/* Images */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      {/* This pushes bottom content to same position */}
-      <div className="mt-auto">
-        <div className="border-t border-gray-200 my-6"></div>
+  <div className="w-full overflow-hidden rounded-xl shadow-lg">
+    <img
+      src={images[index]}
+      alt="testimonial"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-        {/* Bottom Row */}
-        <div className="flex items-center justify-between">
-          
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-10 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-sm font-semibold">
-              {item.initials}
-            </div>
-            <div>
-              <h4 className="font-semibold text-[#0f172a]">
-                {item.name}
-              </h4>
-              <p className="text-sm text-gray-500">
-                {item.company}
-              </p>
-            </div>
-          </div>
+  <div className="w-full overflow-hidden rounded-xl shadow-lg">
+    <img
+      src={images[(index + 1) % images.length]}
+      alt="testimonial"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <span className="text-sm font-medium text-gray-700">
-            {item.platform}
-          </span>
+</div>
 
-        </div>
-      </div>
-    </div>
-  ))}
+  {/* Left Arrow */}
+  <button
+    onClick={prevSlide}
+    className="absolute -left-6 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 transition"
+  >
+    <ChevronLeft size={22} />
+  </button>
+
+  {/* Right Arrow */}
+  <button
+    onClick={nextSlide}
+    className="absolute -right-6 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 transition"
+  >
+    <ChevronRight size={22} />
+  </button>
+
 </div>
 
         {/* Button */}

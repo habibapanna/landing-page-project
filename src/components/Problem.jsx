@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import PopupForm from "./PopupForm";
+import { GoLightBulb } from "react-icons/go";
 
 const Problem = () => {
   const problems = [
@@ -88,8 +89,8 @@ const Problem = () => {
 onClick={() => setOpenPopup(true)}
 className="cursor-pointer">
 <div className="mt-15 bg-orange-500 rounded-lg px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
-          
-          <p className="text-white text-lg md:text-xl font-medium text-left max-w-2xl">
+<GoLightBulb className="text-2xl text-white" />
+          <p className="text-white text-lg md:text-xl font-medium text-left max-w-2xl flex items-center">
            The fix isn't more ads or more door-knocking. It's a website built
             specifically for roofing lead generation.
           </p>
