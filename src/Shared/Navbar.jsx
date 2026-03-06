@@ -1,30 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom"; // to get current path
 import { BiSolidZap } from "react-icons/bi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // current path
+  const [activeSection, setActiveSection] = useState("");
 
   const calendlyLink =
     "https://calendly.com/ironpeakweb/30min?month=2026-02";
 
-  // List of nav items
   const navItems = [
-    { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "Services", href: "#services" },
+    { name: "Process", href: "#process" },
     { name: "Reviews", href: "#reviews" },
   ];
 
-  // Function to check if a link is active
-  const isActive = (href) => location.hash === href;
+  // Scrollspy effect
+  useEffect(() => {
+    const sections = navItems.map(item => document.querySelector(item.href));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.6, // 60% of section visible
+      }
+    );
+
+    sections.forEach(sec => sec && observer.observe(sec));
+
+    return () => sections.forEach(sec => sec && observer.unobserve(sec));
+  }, []);
 
   return (
     <header className="w-full bg-white fixed top-0 z-50 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 h-[68px] flex items-center justify-between">
-        
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.reload()}>
           <a href="/">
@@ -45,9 +62,9 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className={`transition ${
-                isActive(item.href)
-                  ? "text-black font-semibold"
+              className={`transition-colors duration-500 ${
+                activeSection === item.href
+                  ? "text-orange-500 font-semibold"
                   : "hover:text-gray-900"
               }`}
             >
@@ -87,8 +104,8 @@ const Navbar = () => {
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className={`transition ${
-                  isActive(item.href)
-                    ? "text-black font-semibold"
+                  activeSection === item.href
+                    ? "text-orange-500 font-semibold"
                     : "hover:text-gray-900"
                 }`}
               >
