@@ -25,7 +25,7 @@ const [openPopup, setOpenPopup] = useState(false);
             Ready to Get More <br /> Roofing Leads?
           </h2>
 
-          <p className="text-gray-400 mb-8 max-w-xl">
+          <p className="text-gray-400 mb-8 max-w-xl text-sm md:text-base">
             Book a free 30-minute strategy call. We'll review your current
             website (or lack of one), show you exactly what's costing you
             leads, and map out a custom plan — no obligation.
@@ -81,7 +81,7 @@ const [openPopup, setOpenPopup] = useState(false);
               Book Your Free Strategy Call
             </h3>
 
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm md:text-base">
               Pick a time that works for you. 30 minutes, free, and packed with
               value for your roofing business.
             </p>

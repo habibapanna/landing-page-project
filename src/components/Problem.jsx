@@ -6,6 +6,8 @@ import {
   Smartphone,
   XCircle,
 } from "lucide-react";
+import { useState } from "react";
+import PopupForm from "./PopupForm";
 
 const Problem = () => {
   const problems = [
@@ -30,6 +32,7 @@ const Problem = () => {
       desc: "Homeowners want to book instantly. Without online scheduling or a strong CTA, you lose them to roofers who make it easy.",
     },
   ];
+ const [openPopup, setOpenPopup] = useState(false);
 
   return (
     <section id="services" className="w-full bg-white py-20 md:py-28">
@@ -81,7 +84,10 @@ const Problem = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-15 bg-orange-500 rounded-lg px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
+<button 
+onClick={() => setOpenPopup(true)}
+className="cursor-pointer">
+<div className="mt-15 bg-orange-500 rounded-lg px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
           
           <p className="text-white text-lg md:text-xl font-medium text-left max-w-2xl">
            The fix isn't more ads or more door-knocking. It's a website built
@@ -93,6 +99,9 @@ const Problem = () => {
           </button>
 
         </div>
+</button>
+ {/* Reusable Popup Form */}
+ <PopupForm open={openPopup} setOpen={setOpenPopup} />
       </div>
     </section>
   );
