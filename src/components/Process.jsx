@@ -1,5 +1,5 @@
 import React from "react";
-import { Target, Palette, Zap, Search, Rocket, ShieldCheck } from "lucide-react";
+import { Target, Palette, Zap, Search, Rocket, ShieldCheck, PenTool } from "lucide-react";
 
 const Process = () => {
   const steps = [
@@ -19,32 +19,33 @@ const Process = () => {
     },
     {
       number: "3",
+      icon: <PenTool size={20} className="text-orange-500" />,
+      title: "Content Writing",
+      desc: "Our copywriters craft clear, persuasive website content that speaks directly to your customers, highlights your services, and encourages visitors to take action.",
+      days: "Day 3–4",
+    },
+    {
+      number: "4",
       icon: <Zap size={20} className="text-orange-500" />,
       title: "Lightning-Fast Development",
       desc: "We build your site on a blazing-fast platform, mobile-optimized, with click-to-call, lead forms, and local SEO built in.",
       days: "Day 3–4",
     },
     {
-      number: "4",
+      number: "5",
       icon: <Search size={20} className="text-orange-500" />,
-      title: "SEO & Speed Optimization",
+      title: "Security, SEO & Speed Optimization",
       desc: "We optimize every page for Google meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
       days: "Day 4–5",
     },
     {
-      number: "5",
+      number: "6",
       icon: <Rocket size={20} className="text-orange-500" />,
       title: "Launch & Lead Capture",
       desc: "Your site goes live in 7 days. We connect your CRM, calendar, and lead forms so every visitor has a path to becoming a customer.",
       days: "Day 5–6",
     },
-    {
-      number: "6",
-      icon: <ShieldCheck size={20} className="text-orange-500" />,
-      title: "Security Optimization",
-      desc: "We secure your website with SSL, spam protection, performance optimization, and backups so your business and customer data stay protected.",
-      days: "Day 5–6",
-    }
+
   ];
 
   return (
@@ -67,7 +68,7 @@ const Process = () => {
         </p>
 
         {/* Steps */}
-        <div className="mt-16 grid grid-cols-2 gap-6 text-left">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
           {steps.map((item, index) => (
             <div
               key={index}
@@ -77,14 +78,14 @@ const Process = () => {
               <div className="flex items-start gap-5">
                 
                 {/* Number Circle */}
-                <div className="w-10 h-10 md:hidden md:flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                <div className="w-10 h-10 hidden items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
                   {item.number}
                 </div>
 
                 {/* Text */}
                 <div>
                    {/* Number Circle */}
-                <div className="w-10 h-10 mb-5 md:mb-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm md:text-xl shrink-0">
+                <div className="w-10 h-10 mb-5  md:mb-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm md:text-xl shrink-0">
                   {item.number}
                 </div>
                   <div className="flex items-center gap-2">
