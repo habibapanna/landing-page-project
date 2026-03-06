@@ -114,16 +114,12 @@ const Process = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <button className="bg-orange-500  hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-8 py-4 rounded-lg shadow-lg">
-            Start Your 7-Day Build →
-          </button>
-
-          <p className="mt-4 text-sm md:text-base text-gray-600">
-            Limited spots available each month for <span className="text-orange-500 font-semibold">USA</span> roofers.
-          </p>
-        </div>
+     {/* Bottom CTA */}
+<div className="mt-16 text-center">
+  <p className="mt-4 text-lg md:text-xl text-gray-600" style={{ fontFamily: "'Pacifico', cursive" }}>
+    Limited spots available each month for <span className="text-orange-500 font-semibold uppercase">USA</span> roofers.
+  </p>
+</div>
 
       </div>
     </section>
