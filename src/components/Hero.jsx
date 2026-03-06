@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CheckCircle, Star, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion"; // ✅ Import Framer Motion
+import { TiStarFullOutline } from "react-icons/ti";
 
 const Hero = () => {
   const calendlyLink =
@@ -89,7 +90,7 @@ const Hero = () => {
 
           {/* Small Rating Text */}
           <p className="mt-6 text-gray-400 text-[13px] md:text-sm flex items-center gap-1">
-  <Star size={14} className="text-yellow-400" />
+  <TiStarFullOutline className="text-orange-500 text-xl" />
 4.8 rated on Fiverr & Upwork · 500+ sites launched
 </p>
         </motion.div>
