@@ -89,12 +89,7 @@ const Work = () => {
                   {item.location}
                 </p>
 
-                <div className="mt-4 inline-flex items-center gap-2 bg-gray-100 text-gray-800 text-sm font-medium px-3 py-2 rounded-lg">
-                  <TrendingUp size={16} className="text-orange-500" />
-                  {item.stat}
-                </div>
-
-                <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+                <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
                   {item.desc}
                 </p>
               </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Target, Palette, Zap, Search, Rocket } from "lucide-react";
+import { Target, Palette, Zap, Search, Rocket, ShieldCheck } from "lucide-react";
 
 const Process = () => {
   const steps = [
@@ -14,7 +14,7 @@ const Process = () => {
       number: "2",
       icon: <Palette size={20} className="text-orange-500" />,
       title: "Custom Design Mockup",
-      desc: "We design a conversion-focused layout tailored to roofing in your Texas market — not a template. You approve before we build.",
+      desc: "We design a conversion-focused layout tailored to roofing in your Texas market not a template. You approve before we build.",
       days: "Day 2–3",
     },
     {
@@ -28,7 +28,7 @@ const Process = () => {
       number: "4",
       icon: <Search size={20} className="text-orange-500" />,
       title: "SEO & Speed Optimization",
-      desc: "We optimize every page for Google — meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
+      desc: "We optimize every page for Google meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
       days: "Day 4–5",
     },
     {
@@ -38,10 +38,17 @@ const Process = () => {
       desc: "Your site goes live in 7 days. We connect your CRM, calendar, and lead forms so every visitor has a path to becoming a customer.",
       days: "Day 5–6",
     },
+    {
+      number: "6",
+      icon: <ShieldCheck size={20} className="text-orange-500" />,
+      title: "Security Optimization",
+      desc: "We secure your website with SSL, spam protection, performance optimization, and backups so your business and customer data stay protected.",
+      days: "Day 5–6",
+    }
   ];
 
   return (
-    <section id="process" className="w-full bg-white py-20 md:py-28">
+    <section id="process" className="w-full bg-[#f1f5f9] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 text-center">
         
         {/* Top Label */}
@@ -60,7 +67,7 @@ const Process = () => {
         </p>
 
         {/* Steps */}
-        <div className="mt-16 space-y-6 text-left">
+        <div className="mt-16 grid grid-cols-2 gap-6 text-left">
           {steps.map((item, index) => (
             <div
               key={index}
@@ -70,24 +77,24 @@ const Process = () => {
               <div className="flex items-start gap-5">
                 
                 {/* Number Circle */}
-                <div className="w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                <div className="w-10 h-10 md:hidden md:flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
                   {item.number}
                 </div>
 
                 {/* Text */}
                 <div>
                    {/* Number Circle */}
-                <div className="w-10 h-10 md:hidden mb-5 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                <div className="w-10 h-10 mb-5 md:mb-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm md:text-xl shrink-0">
                   {item.number}
                 </div>
                   <div className="flex items-center gap-2">
                     {item.icon}
-                    <h3 className="font-semibold text-gray-900 text-lg">
+                    <h3 className="font-semibold text-gray-900 text-lg md:text-xl">
                       {item.title}
                     </h3>
                   </div>
 
-                  <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+                  <p className="mt-2 md:mt-5 text-gray-600 text-sm md:text-base leading-relaxed">
                     {item.desc}
                   </p>
                    <span className="md:hidden flex items-center h-6 w-20 mt-5 text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium ">
@@ -113,8 +120,8 @@ const Process = () => {
             Start Your 7-Day Build →
           </button>
 
-          <p className="mt-4 text-sm text-gray-500">
-            Limited spots available each month for Texas roofers.
+          <p className="mt-4 text-sm md:text-base text-gray-600">
+            Limited spots available each month for <span className="text-orange-500 font-semibold">USA</span> roofers.
           </p>
         </div>
 

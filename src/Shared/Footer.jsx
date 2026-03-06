@@ -1,6 +1,8 @@
+import { CalendarClock, FileText, Lock, SearchCheck, TrendingUp, Zap } from "lucide-react";
 import React, { useState } from "react";
+import { BiSolidZap } from "react-icons/bi";
 import { CiCalendar } from "react-icons/ci";
-import { IoCallOutline } from "react-icons/io5";
+import { IoCalendarClearOutline, IoCallOutline } from "react-icons/io5";
 
 const Footer = () => {
   const calendlyLink =
@@ -29,33 +31,41 @@ const [openPopup, setOpenPopup] = useState(false);
             leads, and map out a custom plan — no obligation.
           </p>
 
-          {/* Bullet Points */}
-          <ul className="space-y-3 text-gray-300 mb-8">
-            <li>✅ Free website audit & competitor analysis</li>
-            <li>📄 Custom 7-day website plan for your market</li>
-            <li>📈 Clear ROI projection for your service area</li>
-          </ul>
+        {/* Bullet Points */}
+<ul className="space-y-3 text-gray-300 mb-8">
+
+<li className="flex items-center gap-3">
+  <SearchCheck size={18} className="text-orange-500" />
+  Free website audit & competitor analysis
+</li>
+
+<li className="flex items-center gap-3">
+  <FileText size={18} className="text-orange-500" />
+  Custom 7-day website plan for your market
+</li>
+
+<li className="flex items-center gap-3">
+  <TrendingUp size={18} className="text-orange-500" />
+  Clear ROI projection for your service area
+</li>
+
+</ul>
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4">
-            <button
-              onClick={() => setOpenPopup(true)}
-            className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer flex items-center justify-center gap-2 w-full">
-              <IoCallOutline /> Call Now: (800) 555-1234
-            </button>
 
 
            <a
   href={calendlyLink}
   target="_blank"
   rel="noopener noreferrer"
-  className="border border-gray-500 px-4 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-500 flex items-center justify-center gap-2 w-full"
+  className="border border-orange-500 px-4 py-3 rounded-lg bg-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 flex items-center justify-center gap-2 w-full md:w-sm font-semibold"
 >
-  <CiCalendar /> Schedule a Call
+  <IoCalendarClearOutline className="text-xl" /> Schedule a Call
 </a>
           </div>
 
-          <p className="text-gray-500 text-sm mt-4">
+          <p className="text-gray-400 text-sm mt-4">
             Free call · No contracts · No pressure · Texas roofers only
           </p>
         </div>
@@ -63,9 +73,9 @@ const [openPopup, setOpenPopup] = useState(false);
         {/* Right Card */}
         <div className="bg-white text-black rounded-lg p-10 shadow-xl">
           <div className="text-center mb-6">
-            <div className="bg-gray-100 w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4">
-              📅
-            </div>
+          <div className="bg-gray-100 w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4">
+  <CalendarClock size={26} className="text-orange-500" />
+</div>
 
             <h3 className="text-xl font-bold mb-2">
               Book Your Free Strategy Call
@@ -92,9 +102,10 @@ const [openPopup, setOpenPopup] = useState(false);
 </a>
           </div>
 
-          <p className="text-xs text-gray-500 text-center mt-4">
-            🔒 Your info is 100% private. We never spam.
-          </p>
+          <p className="text-sm text-orange-500 text-center mt-4 flex items-center justify-center gap-2">
+  <Lock size={16} />
+  Your info is 100% private. We never spam.
+</p>
         </div>
       </div>
 
@@ -102,14 +113,15 @@ const [openPopup, setOpenPopup] = useState(false);
       <div className="border-t border-gray-700 bg-[#111827]">
         <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
           
-           <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-[#132a42] rounded-md flex items-center justify-center">
-            <span className="text-orange-500 font-bold text-sm">⚡</span>
-          </div>
-          <h1 className="text-[15px] font-semibold text-white">
-            RoofLaunch<span className="text-orange-500">TX</span>
-          </h1>
-        </div>
+        <div className="flex items-center gap-2">
+  <div className="w-7 h-7 bg-[#132a42] rounded-md flex items-center justify-center">
+    <BiSolidZap className="text-orange-500 text-xl" />
+  </div>
+
+  <h1 className="text-[15px] font-semibold text-white">
+    RoofLaunch<span className="text-orange-500">TX</span>
+  </h1>
+</div>
 
           <p className="text-center">
             © {new Date().getFullYear()} RoofLaunchTX. All rights reserved. · Built for Texas Roofers.

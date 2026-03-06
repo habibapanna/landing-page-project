@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CheckCircle, X } from "lucide-react";
+import { CheckCircle, Star, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion"; // ✅ Import Framer Motion
 
 const Hero = () => {
@@ -29,16 +29,16 @@ const Hero = () => {
         >
           {/* Orange Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400 text-[12px] uppercase tracking-widest font-semibold">
-            Texas Roofing Websites
+            USA Roofing Websites
           </div>
 
           {/* Heading */}
-          <h1 className="mt-6 hidden md:hidden lg:block text-[40px] md:text-[50px] font-bold leading-[1.1]">
+          <h1 className="mt-6 hidden md:hidden lg:block text-[40px] md:text-[48px] font-bold leading-[1.1]">
             Roofing Companies
             <br />
-            Without a Strong
+            Without a Strong Website
             <br />
-            Website <span className="text-orange-500">Lose Jobs Every Week.</span>
+           <span className="text-orange-500">Lose Jobs Every Week.</span>
           </h1>
 
           <h1 className="mt-6 lg:hidden md:block text-[35px] md:text-[48px] font-bold leading-tight">
@@ -88,9 +88,10 @@ const Hero = () => {
           </div>
 
           {/* Small Rating Text */}
-          <p className="mt-6 text-gray-400 text-[13px]">
-            ⭐ 5.0 rated on Fiverr & Upwork · 40+ roofing sites launched
-          </p>
+          <p className="mt-6 text-gray-400 text-[13px] md:text-sm flex items-center gap-1">
+  <Star size={14} className="text-yellow-400" />
+4.8 rated on Fiverr & Upwork · 500+ sites launched
+</p>
         </motion.div>
         {/* POPUP FORM */}
       <AnimatePresence>

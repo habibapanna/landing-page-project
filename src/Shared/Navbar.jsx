@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation } from "react-router-dom"; // to get current path
+import { BiSolidZap } from "react-icons/bi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.reload()}>
           <a href="/">
             <div className="w-7 h-7 bg-[#111827] rounded-lg flex items-center justify-center">
-              <span className="text-orange-500 font-bold text-sm">⚡</span>
+              <span className="text-orange-500 font-bold text-sm"><BiSolidZap className="text-xl" /></span>
             </div>
           </a>
           <a href="/">
