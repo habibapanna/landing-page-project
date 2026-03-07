@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { BiSolidZap } from "react-icons/bi";
+import Logo from './../../public/WhatsApp_Image_2026-03-08_at_12.24.59_AM-removebg-preview.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,15 +44,15 @@ const Navbar = () => {
     <header className="w-full bg-white fixed top-0 z-50 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 h-[68px] flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.reload()}>
+        <div className="flex items-center cursor-pointer" onClick={() => window.location.reload()}>
           <a href="/">
-            <div className="w-7 h-7 bg-[#111827] rounded-lg flex items-center justify-center">
-              <span className="text-orange-500 font-bold text-sm"><BiSolidZap className="text-xl" /></span>
+            <div className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center">
+              <span className=" bg-white"><img src={Logo} alt="" className="bg-white h-full w-full" /></span>
             </div>
           </a>
           <a href="/">
-            <h1 className="text-[15px] font-semibold text-gray-900">
-              RoofLaunch<span className="text-orange-500">TX</span>
+            <h1 className="text-[15px] md:text-lg font-semibold text-gray-900">
+              IronPeak<span className="text-orange-500">Web</span>
             </h1>
           </a>
         </div>
