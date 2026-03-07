@@ -1,15 +1,20 @@
-import React from 'react';
-import Navbar from '../../Shared/Navbar';
-import { Outlet } from 'react-router-dom';
-import Footer from '../../Shared/Footer';
+import React from "react";
+import Navbar from "../../Shared/Navbar";
+import { Outlet } from "react-router-dom";
+import Footer from "../../Shared/Footer";
 import { FaWhatsapp } from "react-icons/fa";
+import TopBar from "../TopBar";
 
 const Main = () => {
-
-  const phoneNumber = "8801234567890"; // replace with your WhatsApp number
+  const phoneNumber = "8801234567890";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+
+      {/* Top Bar */}
+      <TopBar />
+
+      {/* Navbar */}
       <Navbar />
 
       <main className="flex-grow w-full">
@@ -27,7 +32,6 @@ const Main = () => {
       >
         <FaWhatsapp size={28} />
       </a>
-
     </div>
   );
 };

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { BiSolidZap } from "react-icons/bi";
 import { CiCalendar } from "react-icons/ci";
 import { IoCalendarClearOutline, IoCallOutline } from "react-icons/io5";
+import Logo from './../../public/WhatsApp_Image_2026-03-08_at_12.24.59_AM-removebg-preview.png';
 
 const Footer = () => {
   const calendlyLink =
@@ -11,13 +12,13 @@ const Footer = () => {
 const [openPopup, setOpenPopup] = useState(false);
 
   return (
-    <footer className="bg-[#0B1C2D] text-white border-t-4 border-orange-500">
+    <footer id="footer" className="bg-[#0B1C2D] text-white border-t-4 border-orange-600">
       {/* CTA SECTION */}
       <div className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left Content */}
         <div>
-          <p className="text-orange-500 font-semibold tracking-widest text-sm mb-4">
+          <p className="text-orange-600 font-semibold tracking-widest text-sm mb-4">
             LET'S TALK
           </p>
 
@@ -35,17 +36,17 @@ const [openPopup, setOpenPopup] = useState(false);
 <ul className="space-y-3 text-gray-300 mb-8">
 
 <li className="flex items-center gap-3">
-  <SearchCheck size={18} className="text-orange-500" />
+  <SearchCheck size={18} className="text-orange-600" />
   Free website audit & competitor analysis
 </li>
 
 <li className="flex items-center gap-3">
-  <FileText size={18} className="text-orange-500" />
+  <FileText size={18} className="text-orange-600" />
   Custom 7-day website plan for your market
 </li>
 
 <li className="flex items-center gap-3">
-  <TrendingUp size={18} className="text-orange-500" />
+  <TrendingUp size={18} className="text-orange-600" />
   Clear ROI projection for your service area
 </li>
 
@@ -59,22 +60,36 @@ const [openPopup, setOpenPopup] = useState(false);
   href={calendlyLink}
   target="_blank"
   rel="noopener noreferrer"
-  className="border border-orange-500 px-4 py-3 rounded-lg bg-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 flex items-center justify-center gap-2 w-full md:w-sm font-semibold"
+  className="border border-orange-600 px-4 py-3 rounded-lg bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 flex items-center justify-center gap-2 w-full md:w-sm font-semibold"
 >
   <IoCalendarClearOutline className="text-xl" /> Schedule a Call
 </a>
           </div>
 
-          <p className="text-gray-400 text-sm mt-4">
-            Free call · No contracts · No pressure · Texas roofers only
-          </p>
+          <div className="flex flex-wrap gap-3 mt-4 text-sm">
+  <span className="border border-gray-400 px-3 py-1 rounded text-gray-400">
+    Free call
+  </span>
+
+  <span className="border border-gray-400 px-3 py-1 rounded text-gray-400">
+    No contracts
+  </span>
+
+  <span className="border border-gray-400 px-3 py-1 rounded text-gray-400">
+    No pressure
+  </span>
+
+  <span className="border border-gray-400 px-3 py-1 rounded text-gray-400">
+    Texas roofers only
+  </span>
+</div>
         </div>
 
         {/* Right Card */}
         <div className="bg-white text-black rounded-lg p-10 shadow-xl">
           <div className="text-center mb-6">
           <div className="bg-gray-100 w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4">
-  <CalendarClock size={26} className="text-orange-500" />
+  <CalendarClock size={26} className="text-orange-600" />
 </div>
 
             <h3 className="text-xl font-bold mb-2">
@@ -96,13 +111,13 @@ const [openPopup, setOpenPopup] = useState(false);
   href={calendlyLink}
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold inline-block"
+  className="bg-orange-600 hover:white border border-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 text-white px-4 py-3 rounded-lg font-semibold inline-block"
 >
   Book on Calendly →
 </a>
           </div>
 
-          <p className="text-sm text-orange-500 text-center mt-4 flex items-center justify-center gap-2">
+          <p className="text-sm text-orange-600 text-center mt-4 flex items-center justify-center gap-2">
   <Lock size={16} />
   Your info is 100% private. We never spam.
 </p>
@@ -111,17 +126,21 @@ const [openPopup, setOpenPopup] = useState(false);
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 bg-[#111827]">
-        <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
+        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
           
-        <div className="flex items-center gap-2">
-  <div className="w-7 h-7 bg-[#132a42] rounded-md flex items-center justify-center">
-    <BiSolidZap className="text-orange-500 text-xl" />
-  </div>
-
-  <h1 className="text-[15px] font-semibold text-white">
-    RoofLaunch<span className="text-orange-500">TX</span>
-  </h1>
-</div>
+ {/* Logo */}
+        <div className="flex items-center cursor-pointer gap-2" onClick={() => window.location.reload()}>
+          <a href="/">
+            <div className="h-8 w-8 md:h-10 md:w-10 flex items-center justify-center ">
+              <span className=" bg-gray-700 rounded-full"><img src={Logo} alt="" className="bg-white h-full w-full rounded-full" /></span>
+            </div>
+          </a>
+          <a href="/">
+            <h1 className="text-[15px] md:text-lg font-semibold text-white">
+              IronPeak<span className="text-orange-600">Web</span>
+            </h1>
+          </a>
+        </div>
 
           <p className="text-center">
             © {new Date().getFullYear()} RoofLaunchTX. All rights reserved. · Built for Texas Roofers.

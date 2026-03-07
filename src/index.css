@@ -1,14 +1,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-body {
-  font-family: "Roboto", sans-serif;
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/MonaSans-Regular.woff2") format("woff2");
+  font-weight: 400;
 }
 
-html {
-  scroll-behavior: auto;
+@font-face {
+  font-family: "Mona Sans";
+  src: url("/MonaSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Mona Sans", sans-serif !important;
 }

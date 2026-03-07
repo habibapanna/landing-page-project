@@ -7,7 +7,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
 
         {/* Top Label */}
-        <p className="text-orange-500 font-semibold text-sm tracking-[0.25em] uppercase">
+        <p className="text-orange-600 font-semibold text-sm tracking-[0.25em] uppercase">
           Transparent Pricing
         </p>
 
@@ -63,7 +63,7 @@ const Pricing = () => {
           <div className="relative bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-lg shadow-2xl p-10 text-left text-white scale-105">
 
             {/* Badge */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-semibold px-4 py-1 rounded-full flex items-center gap-1">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-xs font-semibold px-4 py-1 rounded-full flex items-center gap-1">
               <Zap size={14} />
               Most Popular
             </div>
@@ -97,7 +97,7 @@ const Pricing = () => {
               ))}
             </ul>
 
-            <button className="mt-8 w-full bg-orange-500 hover:white border border-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 text-white cursor-pointer py-3 rounded-lg font-semibold shadow-lg">
+            <button className="mt-8 w-full bg-orange-600 hover:white border border-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 text-white cursor-pointer py-3 rounded-lg font-semibold shadow-lg">
               Book Free Strategy Call
             </button>
           </div>

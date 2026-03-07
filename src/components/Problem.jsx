@@ -1,6 +1,9 @@
 
 import {
+  BadgeCheck,
+  CalendarCheck,
   CalendarDays,
+  PhoneMissed,
   PhoneOff,
   ShieldAlert,
   Smartphone,
@@ -13,12 +16,12 @@ import { GoLightBulb } from "react-icons/go";
 const Problem = () => {
   const problems = [
     {
-      icon: ShieldAlert,
+      icon: BadgeCheck,
       title: "Lost Credibility Instantly",
       desc: "Homeowners Google you before calling. An outdated or missing website signals you're not trustworthy they move on to a competitor.",
     },
     {
-      icon: PhoneOff,
+      icon: PhoneMissed,
       title: "Missed Calls & Lost Revenue",
       desc: "Without a clear call-to-action and phone number above the fold, potential customers bounce. Each bounce is a job you'll never know you lost.",
     },
@@ -28,7 +31,7 @@ const Problem = () => {
       desc: "Over 70% of searches happen on phones. If your site isn't optimized for mobile, you're invisible to the majority of your market.",
     },
     {
-      icon: CalendarDays,
+        icon: CalendarCheck,
       title: "Missed Inspection Bookings",
       desc: "Homeowners want to book instantly. Without online scheduling or a strong CTA, you lose them to roofers who make it easy.",
     },
@@ -40,7 +43,7 @@ const Problem = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
         
         {/* Top Label */}
-        <p className="text-orange-500 font-semibold text-sm tracking-[0.25em] uppercase">
+        <p className="text-orange-600 font-semibold text-sm tracking-[0.25em] uppercase">
           The Real Problem
         </p>
 
@@ -66,12 +69,11 @@ const Problem = () => {
       className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition duration-300"
     >
       <div className="mb-6">
-        <Icon size={32} className="text-orange-500" />
+        <Icon size={50} className="text-gray-400" />
       </div>
 
       <div className="flex items-start gap-2">
-        <XCircle size={18} className="text-red-500 mt-1" />
-        <h3 className="font-semibold text-gray-900 text-lg leading-snug">
+        <h3 className="font-semibold text-gray-900 md:text-xl text-lg leading-snug">
           {item.title}
         </h3>
       </div>
@@ -84,22 +86,33 @@ const Problem = () => {
 })}
         </div>
 
-        {/* Bottom CTA */}
-<button 
-onClick={() => setOpenPopup(true)}
-className="cursor-pointer">
-<div className="mt-15 bg-orange-500 rounded-lg px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
-<GoLightBulb className="text-2xl text-white" />
-          <p className="text-white text-lg md:text-xl font-medium text-left max-w-2xl flex items-center">
-           The fix isn't more ads or more door-knocking. It's a website built
-            specifically for roofing lead generation.
-          </p>
+{/* Bottom CTA */}
+<button
+  onClick={() => setOpenPopup(true)}
+  className="cursor-pointer w-full"
+>
+  <div
+    className="mt-15 rounded-lg px-10 py-16 flex items-center bg-cover bg-center relative"
+    style={{
+      backgroundImage:
+        "url('https://i.postimg.cc/523phXfJ/teenager-suffering-from-hangover.jpg')",
+    }}
+  >
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
 
-          <button className="bg-white transition-all duration-500 text-orange-500 border border-orange-500 cursor-pointer  font-semibold px-8 py-4 rounded-lg shadow-lg">
-            Fix My Website →
-          </button>
+    {/* Content */}
+    <div className="relative max-w-xl text-left flex flex-col items-center justify-center mx-auto gap-6">
+      <p className="text-white text-xl md:text-3xl font-medium text-center">
+        The fix isn't more ads or more door-knocking. It's a website built
+        specifically for roofing lead generation.
+      </p>
 
-        </div>
+      <button className="hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer font-semibold px-8 py-4 rounded-lg shadow-lg bg-orange-600 text-white">
+        Fix Your Website →
+      </button>
+    </div>
+  </div>
 </button>
  {/* Reusable Popup Form */}
  <PopupForm open={openPopup} setOpen={setOpenPopup} />

@@ -5,42 +5,42 @@ const Process = () => {
   const steps = [
     {
       number: "1",
-      icon: <Target size={20} className="text-orange-500" />,
+      icon: <Target size={20} className="text-orange-600" />,
       title: "Strategy & Discovery Call",
       desc: "We learn your market, competitors, and goals. We identify your highest-converting offer and build the sitemap around it.",
       days: "Day 1–2",
     },
     {
       number: "2",
-      icon: <Palette size={20} className="text-orange-500" />,
+      icon: <Palette size={20} className="text-orange-600" />,
       title: "Custom Design Mockup",
       desc: "We design a conversion-focused layout tailored to roofing in your Texas market not a template. You approve before we build.",
       days: "Day 2–3",
     },
     {
       number: "3",
-      icon: <PenTool size={20} className="text-orange-500" />,
+      icon: <PenTool size={20} className="text-orange-600" />,
       title: "Content Writing",
       desc: "Our copywriters craft clear, persuasive website content that speaks directly to your customers, highlights your services, and encourages visitors to take action.",
       days: "Day 3–4",
     },
     {
       number: "4",
-      icon: <Zap size={20} className="text-orange-500" />,
+      icon: <Zap size={20} className="text-orange-600" />,
       title: "Lightning-Fast Development",
       desc: "We build your site on a blazing-fast platform, mobile-optimized, with click-to-call, lead forms, and local SEO built in.",
       days: "Day 3–4",
     },
     {
       number: "5",
-      icon: <Search size={20} className="text-orange-500" />,
+      icon: <Search size={20} className="text-orange-600" />,
       title: "Security, SEO & Speed Optimization",
       desc: "We optimize every page for Google meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
       days: "Day 4–5",
     },
     {
       number: "6",
-      icon: <Rocket size={20} className="text-orange-500" />,
+      icon: <Rocket size={20} className="text-orange-600" />,
       title: "Launch & Lead Capture",
       desc: "Your site goes live in 7 days. We connect your CRM, calendar, and lead forms so every visitor has a path to becoming a customer.",
       days: "Day 5–6",
@@ -53,7 +53,7 @@ const Process = () => {
       <div className="max-w-7xl mx-auto px-4 text-center">
         
         {/* Top Label */}
-        <p className="text-orange-500 font-semibold text-sm tracking-[0.2em] uppercase">
+        <p className="text-orange-600 font-semibold text-sm tracking-[0.2em] uppercase">
           Our Process
         </p>
 
@@ -78,14 +78,14 @@ const Process = () => {
               <div className="flex items-start gap-5">
                 
                 {/* Number Circle */}
-                <div className="w-10 h-10 hidden items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm shrink-0">
+                <div className="w-10 h-10 hidden items-center justify-center rounded-full bg-orange-600 text-white font-bold text-sm shrink-0">
                   {item.number}
                 </div>
 
                 {/* Text */}
                 <div>
                    {/* Number Circle */}
-                <div className="w-10 h-10 mb-5  md:mb-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold text-sm md:text-xl shrink-0">
+                <div className="w-10 h-10 mb-5  md:mb-8 flex items-center justify-center rounded-full bg-orange-600 text-white font-bold text-sm md:text-xl shrink-0">
                   {item.number}
                 </div>
                   <div className="flex items-center gap-2">
@@ -114,13 +114,6 @@ const Process = () => {
             </div>
           ))}
         </div>
-
-     {/* Bottom CTA */}
-<div className="mt-16 text-center">
-  <p className="mt-4 text-lg md:text-xl text-gray-600" style={{ fontFamily: "'Pacifico', cursive" }}>
-    Limited spots available each month for <span className="text-orange-500 font-semibold uppercase">USA</span> roofers.
-  </p>
-</div>
 
       </div>
     </section>

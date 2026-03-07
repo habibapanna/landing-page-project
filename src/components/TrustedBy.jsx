@@ -46,7 +46,7 @@ const TrustedBy = () => {
     Upwork
   </h3>
 
-  <div className="flex text-orange-500 mb-2">
+  <div className="flex text-orange-600 mb-2">
     {[...Array(5)].map((_, i) => (
       <Star key={i} size={18} fill="currentColor" />
     ))}
@@ -61,7 +61,7 @@ const TrustedBy = () => {
         </div>
 
         {/* Section Heading */}
-        <p className="text-orange-500 text-sm font-semibold tracking-widest uppercase">
+        <p className="text-orange-600 text-sm font-semibold tracking-widest uppercase">
           Client Reviews
         </p>
 
@@ -95,7 +95,7 @@ const TrustedBy = () => {
         {/* Button */}
         <button 
         onClick={() => setOpenModal(true)}
-        className="mt-10 md:mt-20 px-8 py-3 border-2 border-[#0f172a] text-[#0f172a] rounded-lg font-semibold hover:bg-[#0f172a] hover:text-white transition-all duration-500 cursor-pointer">
+        className="mt-10 md:mt-20 px-8 py-3 border-2 border-[#0f172a] hover:text-[#0f172a] rounded-lg font-semibold hover:bg-white bg-[#0f172a] text-white transition-all duration-500 cursor-pointer">
           View Full Reviews
         </button>
 
@@ -112,7 +112,7 @@ const TrustedBy = () => {
       {/* Close Button */}
       <button
         onClick={() => setOpenModal(false)}
-        className="absolute top-4 right-4 cursor-pointer rounded-full border border-gray-500 p-[2px] hover:bg-orange-500 hover:border-none hover:text-white transition-all duration-500"
+        className="absolute top-4 right-4 cursor-pointer rounded-full border border-gray-500 p-[2px] hover:bg-orange-600 hover:border-none hover:text-white transition-all duration-500"
       >
         <X size={20} />
       </button>

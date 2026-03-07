@@ -47,7 +47,7 @@ const PopupForm = ({ open, setOpen }) => {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500 text-gray-300"
+            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600 text-gray-300"
           />
 
           <input
@@ -55,19 +55,19 @@ const PopupForm = ({ open, setOpen }) => {
             name="email"
             placeholder="Your Email"
             required
-            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500 text-gray-300"
+            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600 text-gray-300"
           />
 
           <textarea
             name="message"
             rows="4"
             placeholder="Tell us about your roofing company..."
-            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500 text-gray-300"
+            className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600 text-gray-300"
           ></textarea>
 
           <button
             type="submit"
-            className="w-full bg-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 border border-orange-500 text-white py-3 rounded-lg font-semibold cursor-pointer"
+            className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 border border-orange-600 text-white py-3 rounded-lg font-semibold cursor-pointer"
           >
             Send Request
           </button>

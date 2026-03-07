@@ -16,7 +16,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#0E1A2B] text-white pt-30 md:pt-50 pb-32 overflow-hidden">
+    <section id="hero" className="relative w-full bg-[#0E1A2B] text-white pt-30 md:pt-50 pb-32 overflow-hidden">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A2B] via-[#12243C] to-[#0B1624]" />
 
@@ -29,7 +29,7 @@ const Hero = () => {
           animate="visible"
         >
           {/* Orange Pill */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400 text-[12px] uppercase tracking-widest font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-600/40 bg-orange-600/10 text-white text-[12px] uppercase tracking-widest font-semibold">
             USA Roofing Websites
           </div>
 
@@ -39,13 +39,13 @@ const Hero = () => {
             <br />
             Without a Strong Website
             <br />
-           <span className="text-orange-500">Lose Jobs Every Week.</span>
+           <span className="text-orange-600">Lose Jobs Every Week.</span>
           </h1>
 
           <h1 className="mt-6 lg:hidden md:block text-[35px] md:text-[48px] font-bold leading-tight">
             Roofing Companies
             Without a Strong
-            Website <span className="text-orange-500">Lose Jobs Every Week.</span>
+            Website <span className="text-orange-600 md:text-[60px]">Lose Jobs Every Week.</span>
           </h1>
 
           {/* Paragraph */}
@@ -57,15 +57,15 @@ const Hero = () => {
           {/* Bullet Points */}
           <div className="mt-6 flex flex-col md:flex-row gap-2 md:gap-6 text-[14px] text-gray-300">
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-orange-500" />
+              <CheckCircle size={16} className="text-orange-600" />
               Delivered in 7 Days
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-orange-500" />
+              <CheckCircle size={16} className="text-orange-600" />
               Conversion-Optimized
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle size={16} className="text-orange-500" />
+              <CheckCircle size={16} className="text-orange-600" />
               Texas Roofers Only
             </div>
           </div>
@@ -76,7 +76,7 @@ const Hero = () => {
               href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white px-4 py-3 rounded-lg text-[15px] font-semibold text-center shadow-orange-500 shadow-2xl"
+              className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white px-4 py-3 rounded-lg text-[15px] font-semibold text-center shadow-orange-600 shadow-2xl"
             >
               Book Free Strategy Call
             </a>
@@ -90,7 +90,7 @@ const Hero = () => {
 
           {/* Small Rating Text */}
           <p className="mt-6 text-gray-400 text-[13px] md:text-sm flex items-center gap-1">
-  <TiStarFullOutline className="text-orange-500 text-xl" />
+  <TiStarFullOutline className="text-orange-600 text-xl" />
 4.8 rated on Fiverr & Upwork · 500+ sites launched
 </p>
         </motion.div>
@@ -148,7 +148,7 @@ const Hero = () => {
     name="name"
     placeholder="Your Name"
     required
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500"
+    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
   />
 
   <input
@@ -156,19 +156,19 @@ const Hero = () => {
     name="email"
     placeholder="Your Email"
     required
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500"
+    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
   />
 
   <textarea
     name="message"
     rows="4"
     placeholder="Tell us about your roofing company..."
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-500"
+    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
   ></textarea>
 
   <button
     type="submit"
-    className="w-full bg-orange-500 hover:bg-white hover:text-orange-500 transition-all duration-500 border border-orange-500 text-white py-3 rounded-lg font-semibold cursor-pointer"
+    className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 border border-orange-600 text-white py-3 rounded-lg font-semibold cursor-pointer"
   >
     Send Request
   </button>

@@ -34,7 +34,7 @@ const Work = () => {
     <section id="portfolio" className="w-full bg-slate-100 py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 text-center">
         
-        <p className="text-orange-500 font-semibold text-sm tracking-[0.2em] uppercase">
+        <p className="text-orange-600 font-semibold text-sm tracking-[0.2em] uppercase">
           Our Work
         </p>
 
@@ -66,7 +66,7 @@ const Work = () => {
                 <div className="absolute inset-0 group-hover:bg-black/70 transition-all duration-500"></div>
 
                 {/* Category Badge */}
-                <span className="absolute top-4 left-4 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
+                <span className="absolute top-4 left-4 bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">
                   {item.category}
                 </span>
 
@@ -98,7 +98,7 @@ const Work = () => {
         </div>
 
         <div className="mt-16">
-          <button className="bg-orange-500 hover:bg-white transition-all duration-500 hover:text-orange-500 border border-orange-500 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg">
+          <button className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg">
             Get My Free Website Plan →
           </button>
         </div>
