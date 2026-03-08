@@ -43,7 +43,7 @@ const ProjectPopup = ({ open, setOpen, projects }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white rounded-lg max-w-6xl w-full p-6 relative"
+            className="bg-white rounded-lg max-w-6xl w-full py-15 md:px-2  relative"
           >
             {/* Close Button */}
             <button
@@ -54,7 +54,7 @@ const ProjectPopup = ({ open, setOpen, projects }) => {
             </button>
 
             {/* Carousel */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center md:gap-4">
               <button
                 onClick={handlePrev}
                 className=""
