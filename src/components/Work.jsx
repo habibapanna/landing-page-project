@@ -99,7 +99,7 @@ const Work = () => {
 
         <div className="mt-16">
           <button className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg">
-            Get My Free Website Plan →
+          View More Projects →
           </button>
         </div>
 
