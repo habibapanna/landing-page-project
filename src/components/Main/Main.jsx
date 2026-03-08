@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import TopBar from "../TopBar";
 
 const Main = () => {
-  const phoneNumber = "8801234567890";
+  const phoneNumber = "880 1790-430333";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
