@@ -34,22 +34,16 @@ useEffect(() => {
         }
       });
 
-      // If hero visible → remove active link
       if (hero && hero.getBoundingClientRect().top >= -100) {
         setActiveSection("");
       }
 
-      // If footer visible → remove active link
-      if (
-        footer &&
-        footer.getBoundingClientRect().top <
-          window.innerHeight - 200
-      ) {
+      if (footer && footer.getBoundingClientRect().top < window.innerHeight - 200) {
         setActiveSection("");
       }
     },
     {
-      threshold: 0.6,
+      threshold: 0.4, // smaller threshold works better on mobile
     }
   );
 
@@ -106,7 +100,7 @@ useEffect(() => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-800"
+          className="md:hidden text-gray-800 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -117,20 +111,25 @@ useEffect(() => {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="flex flex-col px-4 py-6 gap-6 text-[15px] font-medium text-gray-700">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`transition ${
-                  activeSection === item.href
-                    ? "text-orange-600 font-semibold"
-                    : "hover:text-gray-900"
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
+           {navItems.map((item) => (
+  <a
+    key={item.href}
+    href={item.href}
+    onClick={(e) => {
+      e.preventDefault();
+      const section = document.querySelector(item.href);
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false); // close mobile menu
+    }}
+    className={`transition ${
+      activeSection === item.href
+        ? "text-orange-600 font-semibold"
+        : "hover:text-gray-900"
+    }`}
+  >
+    {item.name}
+  </a>
+))}
 
             <a
               href={calendlyLink}
