@@ -1,12 +1,41 @@
 // components/PopupForm.jsx
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const PopupForm = ({ open, setOpen }) => {
   if (!open) return null;
+  const [success, setSuccess] = useState(false);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_5z0o1ol",
+    "template_xto2bht",
+    e.target,
+    "RmvrQBL5wNi0oU3SW"
+  )
+  .then(() => {
+    e.target.reset();
+    setSuccess(true);
+
+    setTimeout(() => {
+      setOpen(false);   // close popup
+      setSuccess(false);
+    }, 1500);
+  })
+  .catch((error) => {
+    console.log(error);
+    alert("Failed to send message");
+  });
+};
 
   return (
+
+  
+
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
       initial={{ opacity: 0 }}
@@ -37,7 +66,7 @@ const PopupForm = ({ open, setOpen }) => {
           Tell us about your roofing business and we'll send a website plan.
         </p>
 
-        <form method="POST" className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_subject" value="New Website Plan Request!" />
           <input type="hidden" name="_template" value="table" />
@@ -65,12 +94,18 @@ const PopupForm = ({ open, setOpen }) => {
             className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600 text-gray-300"
           ></textarea>
 
-          <button
-            type="submit"
-            className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 border border-orange-600 text-white py-3 rounded-lg font-semibold cursor-pointer"
-          >
-            Send Request
-          </button>
+       {success ? (
+  <div className="text-green-400 text-center font-semibold py-3">
+    ✅ Request sent successfully!
+  </div>
+) : (
+  <button
+    type="submit"
+    className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 border border-orange-600 text-white py-3 rounded-lg font-semibold cursor-pointer"
+  >
+    Send Request
+  </button>
+)}
         </form>
       </motion.div>
     </motion.div>

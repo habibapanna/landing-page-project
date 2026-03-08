@@ -59,7 +59,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <header className="w-full bg-white fixed top-10 z-50 backdrop-blur-md border-b border-gray-200">
+    <header className="w-full bg-white fixed top-9 md:top-10 z-50 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 h-[68px] flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center cursor-pointer" onClick={() => window.location.reload()}>

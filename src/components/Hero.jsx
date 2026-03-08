@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { CheckCircle, Star, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion"; // ✅ Import Framer Motion
 import { TiStarFullOutline } from "react-icons/ti";
-
+import emailjs from "@emailjs/browser";
+import PopupForm from "./PopupForm";
 const Hero = () => {
   const calendlyLink =
     "https://calendly.com/ironpeakweb/30min?month=2026-02";
@@ -16,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative w-full bg-[#0E1A2B] text-white pt-30 md:pt-50 pb-32 overflow-hidden">
+    <section id="hero" className="relative w-full bg-[#0E1A2B] text-white pt-40 md:pt-50 pb-32 overflow-hidden">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E1A2B] via-[#12243C] to-[#0B1624]" />
 
@@ -34,7 +35,7 @@ const Hero = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="mt-6 hidden md:hidden lg:block text-[40px] md:text-[48px] font-bold leading-[1.1]">
+          <h1 className="mt-6 hidden md:hidden lg:block text-[40px] lg:text-[48px] font-bold leading-[1.1]">
             Roofing Companies
             <br />
             Without a Strong Website
@@ -78,13 +79,13 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white px-4 py-3 rounded-lg text-[15px] font-semibold text-center shadow-orange-600 shadow-2xl"
             >
-              Book Free Strategy Call
+              Book a Strategy Call
             </a>
 
             <button
                onClick={() => setOpenPopup(true)}
             className="border border-white text-white px-4 py-3 rounded-lg text-[15px] font-semibold transition-all duration-500 hover:bg-white hover:text-gray-800 cursor-pointer">
-              Get a Free Website Plan →
+              Get a Website Plan →
             </button>
           </div>
 
@@ -94,92 +95,8 @@ const Hero = () => {
 4.8 rated on Fiverr & Upwork · 500+ sites launched
 </p>
         </motion.div>
-        {/* POPUP FORM */}
-      <AnimatePresence>
-        {openPopup && (
-        <motion.div
-  className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  onClick={() => setOpenPopup(false)}   // 👈 close when clicking outside
->
-
-          <motion.div
-  onClick={(e) => e.stopPropagation()}   // 👈 prevent closing when clicking inside
-  initial={{ scale: 0.9, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  exit={{ scale: 0.9, opacity: 0 }}
-  className="bg-[#0E1A2B] border border-white/10 rounded-lg p-8 w-full max-w-lg relative shadow-2xl"
->
-
-              {/* Close Button */}
-              <button
-                onClick={() => setOpenPopup(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-all duration-500 cursor-pointer"
-              >
-                <X size={20} />
-              </button>
-
-              <h2 className="text-2xl font-bold mb-2">
-                Get Your Free Website Plan
-              </h2>
-
-              <p className="text-gray-400 text-sm mb-6">
-                Tell us about your roofing business and we'll send a website plan.
-              </p>
-
-<form
-  method="POST"
-  className="space-y-4"
->
-
-  {/* Disable captcha */}
-  <input type="hidden" name="_captcha" value="false" />
-
-  {/* Email subject */}
-  <input type="hidden" name="_subject" value="New Website Plan Request!" />
-
-  {/* Prevent redirect page */}
-  <input type="hidden" name="_template" value="table" />
-
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
-  />
-
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
-  />
-
-  <textarea
-    name="message"
-    rows="4"
-    placeholder="Tell us about your roofing company..."
-    className="w-full px-4 py-3 rounded-lg bg-[#12243C] border border-white/10 focus:outline-none focus:border-orange-600"
-  ></textarea>
-
-  <button
-    type="submit"
-    className="w-full bg-orange-600 hover:bg-white hover:text-orange-600 transition-all duration-500 border border-orange-600 text-white py-3 rounded-lg font-semibold cursor-pointer"
-  >
-    Send Request
-  </button>
-
-</form>
-
-            </motion.div>
-
-          </motion.div>
-        )}
-      </AnimatePresence>
+ {/* Reusable Popup Form */}
+ <PopupForm open={openPopup} setOpen={setOpenPopup} />
 
         {/* RIGHT */}
         <motion.div

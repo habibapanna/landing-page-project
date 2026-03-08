@@ -4,6 +4,9 @@ import { BiSolidZap } from "react-icons/bi";
 import { CiCalendar } from "react-icons/ci";
 import { IoCalendarClearOutline, IoCallOutline } from "react-icons/io5";
 import Logo from './../../public/WhatsApp_Image_2026-03-08_at_12.24.59_AM-removebg-preview.png';
+import { AnimatePresence, motion } from "framer-motion";
+import { X } from "lucide-react";
+import PopupForm from "../components/PopupForm";
 
 const Footer = () => {
   const calendlyLink =
@@ -116,11 +119,6 @@ const [openPopup, setOpenPopup] = useState(false);
   Book on Calendly →
 </a>
           </div>
-
-          <p className="text-sm text-orange-600 text-center mt-4 flex items-center justify-center gap-2">
-  <Lock size={16} />
-  Your info is 100% private. We never spam.
-</p>
         </div>
       </div>
 
@@ -143,17 +141,24 @@ const [openPopup, setOpenPopup] = useState(false);
         </div>
 
           <p className="text-center">
-            © {new Date().getFullYear()} IronPeakWeb. All rights reserved. · Built for USA Roofers.
+            © {new Date().getFullYear()} IronPeakWeb. All rights reserved. Built for USA Roofers.
           </p>
 
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition">Privacy</a>
             <a href="#" className="hover:text-white transition">Terms</a>
-            <a href="#" className="hover:text-white transition">Contact</a>
+           <button
+  onClick={() => setOpenPopup(true)}
+  className="hover:text-white transition cursor-pointer"
+>
+  Contact
+</button>
           </div>
 
         </div>
       </div>
+ {/* Reusable Popup Form */}
+ <PopupForm open={openPopup} setOpen={setOpenPopup} />
     </footer>
   );
 };
