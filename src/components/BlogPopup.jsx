@@ -32,8 +32,12 @@ const BlogPopup = ({ open, setOpen, blogs }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
-      <div className="bg-white max-w-6xl w-full rounded-lg py-15 md:px-4 relative">
+    <div
+    onClick={() => setOpen(false)}
+    className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+      <div
+      onClick={(e) => e.stopPropagation()}
+      className="bg-white max-w-6xl w-full rounded-lg py-15 md:px-4 relative">
 
         <button
           onClick={() => setOpen(false)}
