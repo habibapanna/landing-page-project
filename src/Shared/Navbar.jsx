@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { BiSolidZap } from "react-icons/bi";
 import Logo from './../../public/WhatsApp_Image_2026-03-08_at_12.24.59_AM-removebg-preview.png';
 
 const Navbar = () => {
@@ -15,6 +14,7 @@ const Navbar = () => {
     { name: "Services", href: "#services" },
     { name: "Process", href: "#process" },
     { name: "Reviews", href: "#reviews" },
+    { name: "Blogs", href: "#blogs" },
   ];
 
   // Scrollspy effect
@@ -70,7 +70,7 @@ useEffect(() => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10 text-[14px] text-gray-500 font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-[14px] text-gray-500 font-medium">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -110,7 +110,7 @@ useEffect(() => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="flex flex-col px-4 py-6 gap-6 text-[15px] font-medium text-gray-700">
+          <div className="flex flex-col px-4 py-6 gap-5 text-[15px] font-medium text-gray-700">
            {navItems.map((item) => (
   <a
     key={item.href}

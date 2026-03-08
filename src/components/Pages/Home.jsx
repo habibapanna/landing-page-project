@@ -5,6 +5,7 @@ import Process from '../Process';
 import Work from '../Work';
 import TrustedBy from '../TrustedBy';
 import Pricing from '../Pricing';
+import Blogs from '../Blogs';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
 <Problem />
 <Process />
 <TrustedBy />
+<Blogs></Blogs>
 
         </div>
     );

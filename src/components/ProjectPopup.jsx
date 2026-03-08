@@ -48,7 +48,7 @@ const ProjectPopup = ({ open, setOpen, projects }) => {
             {/* Close Button */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 text-gray-700  cursor-pointer border border-gray-300 rounded-full p-1 hover:border-none hover:bg-orange-600 hover:text-white transition-all duration-600"
+              className="absolute top-4 right-4 text-gray-700  cursor-pointer border border-gray-300 rounded-full p-1 hover:border-none hover:bg-orange-600 hover:text-white transition-all duration-500"
             >
               <X size={20} />
             </button>
