@@ -18,7 +18,7 @@ const Pricing = () => {
 
         {/* Subtext */}
         <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
-          A single booked roof job in Texas covers your entire investment.
+          A single booked roof job in USA covers your entire investment.
           Most clients break even in the first week.
         </p>
 
@@ -70,7 +70,7 @@ const Pricing = () => {
 
             <h3 className="text-xl font-semibold">Growth</h3>
             <p className="text-sm text-gray-300 mt-1">
-              Best for established Texas roofers
+              Best for established USA roofers
             </p>
 
             <div className="mt-6">
@@ -106,7 +106,7 @@ const Pricing = () => {
           <div className="bg-white rounded-lg shadow-md border border-gray-200 p-8 text-left">
             <h3 className="text-xl font-semibold text-gray-900">Authority</h3>
             <p className="text-sm text-gray-500 mt-1">
-              Dominate your Texas market
+              Dominate your USA market
             </p>
 
             <div className="mt-6">
@@ -143,7 +143,7 @@ const Pricing = () => {
         {/* ROI Box */}
         <div className="mt-20 max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-sm text-gray-700">
           💰 <span className="font-semibold">ROI Reality Check:</span> The average
-          residential roof replacement in Texas is $8,000–$15,000.
+          residential roof replacement in USA is $8,000–$15,000.
           One booked job from your new website pays for itself 5–15x.
           Most clients recoup their investment within 30 days.
         </div>

@@ -70,7 +70,7 @@ const TrustedBy = () => {
         </h2>
 
         <p className="mt-5 text-gray-600 text-lg max-w-2xl mx-auto">
-          Texas roofing companies trust us to build their online presence.
+          USA roofing companies trust us to build their online presence.
         </p>
 
 {/* Image */}

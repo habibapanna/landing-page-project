@@ -51,7 +51,7 @@ const Hero = () => {
           {/* Paragraph */}
           <p className="mt-6 text-gray-300 text-[18px] md:text-[20px] max-w-lg leading-tight">
             We Build & Redesign Roofing Websites That Generate More Calls
-            and Booked Inspections in Texas.
+            and Booked Inspections in USA.
           </p>
 
           {/* Bullet Points */}
@@ -66,7 +66,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle size={16} className="text-orange-600" />
-              Texas Roofers Only
+              USA Roofers Only
             </div>
           </div>
 

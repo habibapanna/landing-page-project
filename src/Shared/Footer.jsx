@@ -80,7 +80,7 @@ const [openPopup, setOpenPopup] = useState(false);
   </span>
 
   <span className="border border-gray-400 px-3 py-1 rounded text-gray-400">
-    Texas roofers only
+    USA roofers only
   </span>
 </div>
         </div>
@@ -143,7 +143,7 @@ const [openPopup, setOpenPopup] = useState(false);
         </div>
 
           <p className="text-center">
-            © {new Date().getFullYear()} RoofLaunchTX. All rights reserved. · Built for Texas Roofers.
+            © {new Date().getFullYear()} IronPeakWeb. All rights reserved. · Built for USA Roofers.
           </p>
 
           <div className="flex gap-6">

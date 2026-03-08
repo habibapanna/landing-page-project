@@ -15,7 +15,7 @@ const Work = () => {
     {
       img: "https://texan-roof-boost.lovable.app/assets/portfolio-storm-Bi1gzLQO.jpg",
       category: "Storm Damage",
-      company: "Texas Storm Response",
+      company: "USA Storm Response",
       location: "Houston, TX",
       stat: "47 inspection requests in week 1",
       desc: "Emergency-focused landing page with urgency CTAs, insurance claim guide, and instant quote form.",

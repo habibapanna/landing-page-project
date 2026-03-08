@@ -14,7 +14,7 @@ const Process = () => {
       number: "2",
       icon: <Palette size={20} className="text-orange-600" />,
       title: "Custom Design Mockup",
-      desc: "We design a conversion-focused layout tailored to roofing in your Texas market not a template. You approve before we build.",
+      desc: "We design a conversion-focused layout tailored to roofing in your USA market not a template. You approve before we build.",
       days: "Day 2–3",
     },
     {
@@ -35,7 +35,7 @@ const Process = () => {
       number: "5",
       icon: <Search size={20} className="text-orange-600" />,
       title: "Security, SEO & Speed Optimization",
-      desc: "We optimize every page for Google meta tags, schema markup, Core Web Vitals, and local citation signals for Texas.",
+      desc: "We optimize every page for Google meta tags, schema markup, Core Web Vitals, and local citation signals for USA.",
       days: "Day 4–5",
     },
     {
@@ -64,7 +64,7 @@ const Process = () => {
 
         {/* Subtext */}
         <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
-          From strategy call to go-live in 7 days. Every step is engineered to maximize lead generation for Texas roofers.
+          From strategy call to go-live in 7 days. Every step is engineered to maximize lead generation for USA roofers.
         </p>
 
         {/* Steps */}
