@@ -1,9 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { TrendingUp } from "lucide-react";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
+import ProjectPopup from "./ProjectPopup";
 
 const Work = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+   const [visibleProjects, setVisibleProjects] = useState(3);
+
   const projects = [
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-residential-DcKfmx6o.jpg",
+      category: "Residential Roofing",
+      company: "Lone Star Roofing Co.",
+      location: "Austin, TX",
+      stat: "+180% more calls in 30 days",
+      desc: "Full redesign with mobile-first layout, click-to-call, and Google Reviews integration.",
+    },
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-storm-Bi1gzLQO.jpg",
+      category: "Storm Damage",
+      company: "USA Storm Response",
+      location: "Houston, TX",
+      stat: "47 inspection requests in week 1",
+      desc: "Emergency-focused landing page with urgency CTAs, insurance claim guide, and instant quote form.",
+    },
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-commercial-9X3a5sn9.jpg",
+      category: "Commercial Roofing",
+      company: "Apex Commercial Roofing",
+      location: "Dallas, TX",
+      stat: "Ranked #1 for local keywords",
+      desc: "Authority-positioning site with project gallery, certifications, and lead capture optimized for B2B.",
+    },
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-residential-DcKfmx6o.jpg",
+      category: "Residential Roofing",
+      company: "Lone Star Roofing Co.",
+      location: "Austin, TX",
+      stat: "+180% more calls in 30 days",
+      desc: "Full redesign with mobile-first layout, click-to-call, and Google Reviews integration.",
+    },
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-storm-Bi1gzLQO.jpg",
+      category: "Storm Damage",
+      company: "USA Storm Response",
+      location: "Houston, TX",
+      stat: "47 inspection requests in week 1",
+      desc: "Emergency-focused landing page with urgency CTAs, insurance claim guide, and instant quote form.",
+    },
+    {
+      img: "https://texan-roof-boost.lovable.app/assets/portfolio-commercial-9X3a5sn9.jpg",
+      category: "Commercial Roofing",
+      company: "Apex Commercial Roofing",
+      location: "Dallas, TX",
+      stat: "Ranked #1 for local keywords",
+      desc: "Authority-positioning site with project gallery, certifications, and lead capture optimized for B2B.",
+    },
     {
       img: "https://texan-roof-boost.lovable.app/assets/portfolio-residential-DcKfmx6o.jpg",
       category: "Residential Roofing",
@@ -30,6 +82,24 @@ const Work = () => {
     },
   ];
 
+
+React.useEffect(() => {
+  const updateProjects = () => {
+    if (window.innerWidth >= 1024) {
+      setVisibleProjects(3); // large
+    } else if (window.innerWidth >= 768) {
+      setVisibleProjects(2); // md
+    } else {
+      setVisibleProjects(1); // mobile
+    }
+  };
+
+  updateProjects();
+  window.addEventListener("resize", updateProjects);
+
+  return () => window.removeEventListener("resize", updateProjects);
+}, []);
+
   return (
     <section id="portfolio" className="w-full bg-slate-100 py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 text-center">
@@ -47,7 +117,7 @@ const Work = () => {
         </p>
 
         <div className="mt-16 grid md:grid-cols-3 gap-10 text-left">
-          {projects.map((item, index) => (
+        {projects.slice(0, visibleProjects).map((item, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden cursor-pointer group transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
@@ -98,12 +168,21 @@ const Work = () => {
         </div>
 
         <div className="mt-16">
-          <button className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg">
-          View More Projects →
+        <button
+            className="bg-orange-600 hover:bg-white transition-all duration-500 hover:text-orange-600 border border-orange-600 cursor-pointer text-white font-semibold px-10 py-4 rounded-lg shadow-lg"
+            onClick={() => setOpenPopup(true)}
+          >
+            View More Projects →
           </button>
         </div>
 
       </div>
+        {/* Popup */}
+      <ProjectPopup
+        open={openPopup}
+        setOpen={setOpenPopup}
+        projects={projects}
+      />
     </section>
   );
 };
