@@ -1,44 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 import BlogPopup from "./BlogPopup";
+import blogsData from "../data/blogsData";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
 
   const [openPopup, setOpenPopup] = useState(false);
   const [visibleBlogs, setVisibleBlogs] = useState(3);
 
-  const blogs = [
-    {
-      img: "https://images.unsplash.com/photo-1556911220-bff31c812dba",
-      title: "How Roofing Websites Generate More Leads",
-      desc: "Learn how optimized roofing websites convert visitors into real inspection bookings."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-      title: "SEO Strategies for Roofing Companies",
-      desc: "The exact SEO methods roofing companies use to dominate local search results."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-      title: "Why Mobile First Websites Matter",
-      desc: "Over 70% of roofing searches come from phones. Here’s why mobile design matters."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-      title: "5 Mistakes Roofing Websites Make",
-      desc: "Avoid the biggest mistakes that stop roofing websites from generating leads."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-      title: "How Fast Websites Increase Conversions",
-      desc: "Website speed directly affects Google rankings and lead generation."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-      title: "The Future of Roofing Marketing",
-      desc: "Discover the trends that will shape roofing company marketing."
-    }
-  ];
 
   useEffect(() => {
 
@@ -76,50 +46,50 @@ const Blogs = () => {
 
         <div className="mt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 text-left">
 
-          {blogs.slice(0, visibleBlogs).map((blog, index) => (
+        {blogsData.slice(0, visibleBlogs).map((blog, index) => (
 
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden group hover:-translate-y-1 transition-all duration-500"
-            >
+  <Link
+    key={index}
+    to={`/blog/${blog.slug}`}
+    className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden group hover:-translate-y-1 transition-all duration-500 cursor-pointer"
+  >
 
-              <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden">
 
-                <img
-                  src={blog.img}
-                  alt=""
-                  className="w-full h-[240px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+      <img
+        src={blog.img}
+        alt=""
+        className="w-full h-[240px] object-cover transition-transform duration-700 group-hover:scale-105"
+      />
 
-                <div className="absolute inset-0 group-hover:bg-black/70 transition duration-500"></div>
+      <div className="absolute inset-0 group-hover:bg-black/70 transition duration-500"></div>
 
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
 
-                  <div className="flex items-center gap-2 text-white font-semibold text-lg">
-                    <LuSquareArrowOutUpRight size={20} />
-                    Read Blog
-                  </div>
+        <div className="flex items-center gap-2 text-white font-semibold text-lg">
+          <LuSquareArrowOutUpRight size={20} />
+          Read Blog
+        </div>
 
-                </div>
+      </div>
 
-              </div>
+    </div>
 
-              <div className="p-6">
+    <div className="p-6">
 
-                <h3 className="font-semibold text-lg text-gray-900">
-                  {blog.title}
-                </h3>
+      <h3 className="font-semibold text-lg text-gray-900">
+        {blog.title}
+      </h3>
 
-                <p className="mt-4 text-gray-600 text-sm leading-relaxed">
-                  {blog.desc}
-                </p>
+      <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+        {blog.desc}
+      </p>
 
-              </div>
+    </div>
 
-            </div>
+  </Link>
 
-          ))}
-
+))}
         </div>
 
         {/* View More Button */}
@@ -140,7 +110,6 @@ const Blogs = () => {
       <BlogPopup
         open={openPopup}
         setOpen={setOpenPopup}
-        blogs={blogs}
       />
 
     </section>

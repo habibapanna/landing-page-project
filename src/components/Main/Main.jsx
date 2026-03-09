@@ -5,16 +5,20 @@ import Footer from "../../Shared/Footer";
 import { FaWhatsapp } from "react-icons/fa";
 import TopBar from "../TopBar";
 
+import ScrollToTop from "../../components/ScrollToTop";
+import ScrollTopButton from "../../components/ScrollTopButton";
+
 const Main = () => {
+
   const phoneNumber = "8801790430333";
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
 
-      {/* Top Bar */}
+      <ScrollToTop />
+
       <TopBar />
 
-      {/* Navbar */}
       <Navbar />
 
       <main className="flex-grow w-full">
@@ -23,7 +27,7 @@ const Main = () => {
 
       <Footer />
 
-      {/* Floating WhatsApp Button */}
+      {/* WhatsApp */}
       <a
         href={`https://wa.me/${phoneNumber}`}
         target="_blank"
@@ -32,6 +36,10 @@ const Main = () => {
       >
         <FaWhatsapp size={28} />
       </a>
+
+      {/* Scroll To Top */}
+      <ScrollTopButton />
+
     </div>
   );
 };
